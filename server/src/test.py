@@ -42,9 +42,25 @@ def test_get_mess(session_id):
     print(response.text)
 
 
+def test_update_info(session_id):
+    url = "http://172.17.0.2:80/user"
+    cookies = {"session_id=" : session_id}
+    data = {
+        "Action" : "Update",
+        "id" : "1000000002",
+        "data_type" : ["username"],
+        "old_data" : ['test_ekkowwang'],
+        "new_data" : ["playmaker"]
+    }
+    response = requests.post(url=url, cookies=cookies, json=data)
+    print(response.text)
+
+
 if __name__ == "__main__":
     # test_logon()
     #test()
-    test_get_mess(test_login())
+    # test_get_mess(test_login())
+    test_update_info(test_login())
+    
     
     

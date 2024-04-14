@@ -41,6 +41,21 @@ def get_table(data_type):
     except:
         return None
 
+def id_exist(tb,id):
+    try:
+        sql = f'select id from {tb} where id=%s'
+        mysql_cli = pymysql.connect(**MYSQL_CONF)
+        cur = mysql_cli.cursor()
+        ret = cur.execute(sql,(id,))
+        if ret == None and len(ret) == 0:
+            return False
+        else:
+            return True
+    except Exception as e:
+            log.error(e)
+            return False
+        
+
 #格式检查
 def check_username_or_password(data):
     if len(data) < 1 or len(data.encode("utf-8")) > 20:
@@ -148,13 +163,77 @@ class Login(object):
     
 class Update(object):
     def __init__(self) -> None:
-        pass
+        self.client_mysql = pymysql.connect(**MYSQL_CONF)
     def run(self, data):
-        pass
+        # 检查请求是否出错
+        if not self.check_request(data):
+            return CODE_OK,{'success':False,"mess":"parameter error"}
+        # 对请求进行处理，先检查旧数据是否正确，如果错误，不予许修改
+        if not self.check_old_data():
+            return CODE_OK,{'success':False,"mess":"old data is wrong"}
+
+        # 更新操作
+        if self.process():
+            return CODE_OK,{'success':True,"mess":"update success"}
+        else:
+            return CODE_OK,{'success':False,"mess":"update failed"}
+    
+    def process(self):
+        try:
+            # 更改表中的数据
+            for i in range(self.data_len):    
+                # 如果数据本身不存在，直接插入，如果数据存在，修改
+                d_type = self.data_type[i]
+                d_table = self.search_obj.type_table_m[d_type]
+                if not id_exist(d_table,self.id):
+                    sql = f'insert into {d_table}(id, {d_type}) values(%s, %s)'
+                    args = (self.id, self.new_data[i], )
+                    cursor = self.client_mysql.cursor()
+                    cursor.execute(sql,args)
+                    self.client_mysql.commit()
+                else:
+                    sql = f'update {d_table} set {d_type}=%s where id=%s'
+                    args = (self.new_data[i], self.id,)
+                    cursor = self.client_mysql.cursor()
+                    cursor.execute(sql,args)
+                    self.client_mysql.commit()
+            return True
+                    
+        except Exception as e:
+            log.error(f'Update.process error:'+str(e))
+            return False
+        
+    def check_request(self, data):
+        self.id = data.get('id', '')
+        self.data_type = data.get('data_type',[])
+        self.old_data = data.get('old_data',[])
+        self.new_data = data.get('new_data',[])
+        if self.id=='' or self.data_type==[] or self.old_data==[] or self.new_data==[]:
+            return False
+        self.data_len = len(self.data_type)
+        if self.data_len != len(self.old_data) or self.data_len != len(self.new_data):
+            return False
+        return True
+    
+    def check_old_data(self):
+        search_old_data_request = {
+            "Action" : "GetMessage",
+            "id" : self.id,
+            "data_type" : self.data_type,
+        }
+        self.search_obj = GetMessage()
+        self.search_obj.root = True
+        real_old_data = self.search_obj.run(search_old_data_request)[1]['data']
+        for i in range(self.data_len):
+            if real_old_data[i] != self.old_data[i]:
+                return False
+        return True
+        
         
 class GetMessage(object):
     def __init__(self) -> None:
         self.client_mysql = pymysql.connect(**MYSQL_CONF)
+        self.root = False
     def run(self, data):
         # 查询信息所在的表
         data_types = data.get("data_type",[])
@@ -163,16 +242,21 @@ class GetMessage(object):
             return CODE_OK, {'success': False, "mess" : "id empty"}
         if data_types == []:
             return CODE_OK, {'success': False, "mess" : "data_type empty"}
-        type_table_m = {}
+        
+        #如果没有权限，那么不允许查询密码
+        if not self.root and "password" in data_types:
+            return CODE_OK, {'success": False, "mess" : "no permission'}
+        
+        self.type_table_m = {}
         for data_type in data_types:
             data_table = None
             st_time = time.time()
             while data_table == None and time.time() - st_time <= 5:
                 data_table = get_table(data_type)
-            type_table_m[data_type] = data_table
+            self.type_table_m[data_type] = data_table
         # 从表中查询信息
         result_list = []
-        for data_type, data_table in type_table_m.items():
+        for data_type, data_table in self.type_table_m.items():
             res = None
             if data_table == None:
                 result_list.append(None)
@@ -180,7 +264,10 @@ class GetMessage(object):
             st_time = time.time()
             while time.time() - st_time <= 5 and res == None:
                 res = self.search_message(id, data_table, data_type)
-            result_list.append(res)
+            if res == 'NULL':
+                result_list.append(None)
+            else:
+                result_list.append(res)
         # 返回信息
         ret = {
                 "success" : True,
@@ -199,8 +286,11 @@ class GetMessage(object):
             cursor = self.client_mysql.cursor()
             cursor.execute(sql, ( id,))
             result = cursor.fetchone()
+            if len(result)== 0:
+                return "NULL"
             return result[0]
         except:
             return None
+        
         
         

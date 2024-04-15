@@ -1,0 +1,928 @@
+INFO:     Will watch for changes in these directories: ['/workstation/src/other/Graduation_Project/server/src']
+INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+INFO:     Started reloader process [23] using WatchFiles
+INFO:     Started server process [25]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713080376.9421942] [172.17.0.2] [Logon] [] [2024-04-14 07:39:45.402762]
+[ERROR]: Logon.create_user,erro_mess:(1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1") [2024-04-14 07:39:45.409028]
+INFO:     172.17.0.2:32996 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25]
+INFO:     Started server process [28]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713080463.4397662] [172.17.0.2] [Logon] [] [2024-04-14 07:41:16.041685]
+INFO:     172.17.0.2:33440 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [28]
+INFO:     Started server process [197]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [197]
+INFO:     Started server process [198]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [198]
+Process SpawnProcess-5:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 330
+    elif self.friendAction == 1:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 326
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+Process SpawnProcess-6:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 339
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'elif' statement on line 337
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Started server process [203]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [203]
+INFO:     Started server process [204]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [204]
+INFO:     Started server process [205]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [205]
+Process SpawnProcess-10:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 378
+    if ret 
+           ^
+SyntaxError: expected ':'
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+Process SpawnProcess-11:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 380
+    if ret 
+           ^
+SyntaxError: expected ':'
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+Process SpawnProcess-12:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 380
+    if ret 
+           ^
+SyntaxError: expected ':'
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Started server process [209]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [209]
+INFO:     Started server process [210]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [210]
+INFO:     Started server process [211]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713084012.4491944] [172.17.0.2] [Logon] [] [2024-04-15 10:35:53.040396]
+INFO:     172.17.0.2:50908 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [211]
+INFO:     Started server process [657]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [657]
+INFO:     Started server process [658]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [658]
+INFO:     Started server process [659]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+
+[INFO]: [1713177573.6765628] [172.17.0.2] [Login] [] [2024-04-15 10:39:40.766996]
+INFO:     172.17.0.2:52308 - "POST /user HTTP/1.1" 200 OK
+session_id==bD1pFhNRCSAZGWYe
+[INFO]: [1713177573.6765628] [172.17.0.2] [GetMessage] [session_id==bD1pFhNRCSAZGWYe] [2024-04-15 10:39:40.772618]
+username
+INFO:     172.17.0.2:52314 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [659]
+INFO:     Started server process [661]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [661]
+INFO:     Started server process [663]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [663]
+INFO:     Started server process [664]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [664]
+INFO:     Started server process [665]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [665]
+INFO:     Started server process [666]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713177651.7272015] [172.17.0.2] [Login] [] [2024-04-15 10:40:54.367885]
+INFO:     172.17.0.2:45142 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713177651.7272015] [172.17.0.2] [GetMessage] [session_id=3svNlLl1rlzNINky] [2024-04-15 10:40:54.373189]
+username
+INFO:     172.17.0.2:45148 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [666]
+INFO:     Started server process [668]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [668]
+INFO:     Started server process [669]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [669]
+INFO:     Started server process [670]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [670]
+INFO:     Started server process [671]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [671]
+INFO:     Started server process [672]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [672]
+INFO:     Started server process [673]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [673]
+INFO:     Started server process [675]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713177966.8690639] [172.17.0.2] [Login] [] [2024-04-15 10:46:14.591278]
+INFO:     172.17.0.2:35444 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713177966.8690639] [172.17.0.2] [FriendList] [session_id=llujJFEX0qj1iqyv] [2024-04-15 10:46:14.596608]
+INFO:     172.17.0.2:35454 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [675]
+INFO:     Started server process [677]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713178178.3588912] [172.17.0.2] [Login] [] [2024-04-15 10:49:51.189553]
+INFO:     172.17.0.2:48584 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713178178.3588912] [172.17.0.2] [FriendList] [session_id=EI4dKs45jN9lQMTX] [2024-04-15 10:49:51.194845]
+INFO:     172.17.0.2:48596 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [677]
+INFO:     Started server process [681]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [681]
+INFO:     Started server process [682]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [682]
+INFO:     Started server process [683]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [683]
+INFO:     Started server process [684]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [684]
+INFO:     Started server process [685]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [685]
+INFO:     Started server process [686]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713178926.2531183] [172.17.0.2] [Login] [] [2024-04-15 11:03:00.972210]
+INFO:     172.17.0.2:36940 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713178926.2531183] [172.17.0.2] [FriendList] [session_id=niijnAxbHuq6yEod] [2024-04-15 11:03:00.978197]
+INFO:     172.17.0.2:36954 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713178926.2531183] [172.17.0.2] [Login] [] [2024-04-15 11:04:00.296089]
+INFO:     172.17.0.2:46612 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713178926.2531183] [172.17.0.2] [FriendList] [session_id=lgOmskms5IyA4PEP] [2024-04-15 11:04:00.300572]
+INFO:     172.17.0.2:46628 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [686]
+INFO:     Started server process [689]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713179134.4425004] [172.17.0.2] [Login] [] [2024-04-15 11:05:37.958576]
+INFO:     172.17.0.2:43684 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179134.4425004] [172.17.0.2] [FriendList] [session_id=pUTXy9yFtsvtadSv] [2024-04-15 11:05:37.963699]
+INFO:     172.17.0.2:43690 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [689]
+INFO:     Started server process [691]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [691]
+INFO:     Started server process [692]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [692]
+INFO:     Started server process [693]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [693]
+INFO:     Started server process [694]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713179233.4844172] [172.17.0.2] [Login] [] [2024-04-15 11:07:20.830829]
+INFO:     172.17.0.2:37830 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179233.4844172] [172.17.0.2] [FriendList] [session_id=71Nf1kKlemkf5T2I] [2024-04-15 11:07:20.835993]
+INFO:     172.17.0.2:37838 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [694]
+INFO:     Started server process [696]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713179345.3071425] [172.17.0.2] [Login] [] [2024-04-15 11:09:11.087303]
+INFO:     172.17.0.2:41386 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179345.3071425] [172.17.0.2] [FriendList] [session_id=HgYfK8vyXV9AbQtN] [2024-04-15 11:09:11.092706]
+INFO:     172.17.0.2:41392 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [696]
+INFO:     Started server process [698]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [698]
+INFO:     Started server process [699]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [699]
+INFO:     Started server process [700]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [700]
+INFO:     Started server process [701]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713179647.701377] [172.17.0.2] [Login] [] [2024-04-15 11:14:16.947231]
+INFO:     172.17.0.2:35954 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179647.701377] [172.17.0.2] [Login] [] [2024-04-15 11:14:16.952729]
+INFO:     172.17.0.2:35962 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [701]
+INFO:     Started server process [703]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713179714.3768942] [172.17.0.2] [Login] [] [2024-04-15 11:15:23.548738]
+INFO:     172.17.0.2:41024 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179714.3768942] [172.17.0.2] [Login] [] [2024-04-15 11:15:23.554004]
+INFO:     172.17.0.2:41032 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179714.3768942] [172.17.0.2] [FriendList] [session_id=ERDpZHQ0V5xuWxJE] [2024-04-15 11:15:23.557983]
+INFO:     172.17.0.2:41038 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179714.3768942] [172.17.0.2] [FriendList] [session_id=vosGa4PmBBXuuwOT] [2024-04-15 11:15:23.566011]
+INFO:     172.17.0.2:41050 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179714.3768942] [172.17.0.2] [FriendList] [session_id=0G3FJTw7ujPx4MBX] [2024-04-15 11:15:23.573160]
+INFO:     172.17.0.2:41056 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [703]
+INFO:     Started server process [705]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713179745.1789038] [172.17.0.2] [Login] [] [2024-04-15 11:15:48.548892]
+INFO:     172.17.0.2:48518 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179745.1789038] [172.17.0.2] [Login] [] [2024-04-15 11:15:48.554240]
+INFO:     172.17.0.2:48526 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179745.1789038] [172.17.0.2] [FriendList] [session_id=pcyk4DjajEdyPL2z] [2024-04-15 11:15:48.558182]
+INFO:     172.17.0.2:48536 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179745.1789038] [172.17.0.2] [FriendList] [session_id=oapRmRKYbPHTt5jP] [2024-04-15 11:15:48.562185]
+INFO:     172.17.0.2:48548 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179745.1789038] [172.17.0.2] [FriendList] [session_id=PURyJYpxDE6Xvmdu] [2024-04-15 11:15:48.566043]
+INFO:     172.17.0.2:48554 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179745.1789038] [172.17.0.2] [FriendList] [session_id=2vdmRLXvhQwz1xlI] [2024-04-15 11:15:48.579427]
+INFO:     172.17.0.2:48570 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [705]
+INFO:     Started server process [707]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [707]
+INFO:     Started server process [708]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713179876.0328956] [172.17.0.2] [Login] [] [2024-04-15 11:17:58.461265]
+INFO:     172.17.0.2:33560 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179876.0328956] [172.17.0.2] [Login] [] [2024-04-15 11:17:58.466536]
+INFO:     172.17.0.2:33574 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179876.0328956] [172.17.0.2] [FriendList] [session_id=ODDgDtqitRpXNaLL] [2024-04-15 11:17:58.470364]
+INFO:     172.17.0.2:33590 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179876.0328956] [172.17.0.2] [FriendList] [session_id=kSRYBkQbBTcZ5Eng] [2024-04-15 11:17:58.477409]
+INFO:     172.17.0.2:33606 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713179876.0328956] [172.17.0.2] [FriendList] [session_id=puH6KsTf2Tp9AojY] [2024-04-15 11:17:58.483859]
+[INFO]: Intention [2024-04-15 11:17:58.485977]
+INFO:     172.17.0.2:33614 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [708]
+INFO:     Started server process [710]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [710]
+INFO:     Started server process [711]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [711]
+INFO:     Started server process [712]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [712]
+INFO:     Started server process [713]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180007.7169905] [172.17.0.2] [Login] [] [2024-04-15 11:20:12.916795]
+INFO:     172.17.0.2:33236 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180007.7169905] [172.17.0.2] [Login] [] [2024-04-15 11:20:12.922234]
+INFO:     172.17.0.2:33244 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180007.7169905] [172.17.0.2] [FriendList] [session_id=fHyhEyrqzyFnJInc] [2024-04-15 11:20:12.926219]
+[INFO]: Intention [2024-04-15 11:20:12.928376]
+INFO:     172.17.0.2:33260 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [713]
+INFO:     Started server process [717]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [717]
+INFO:     Started server process [718]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180065.8761265] [172.17.0.2] [Login] [] [2024-04-15 11:21:10.854175]
+INFO:     172.17.0.2:52534 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180065.8761265] [172.17.0.2] [Login] [] [2024-04-15 11:21:10.859907]
+INFO:     172.17.0.2:52548 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180065.8761265] [172.17.0.2] [FriendList] [session_id=xGwkMDlJOLnvvKxn] [2024-04-15 11:21:10.863910]
+INFO:     172.17.0.2:52560 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [718]
+INFO:     Started server process [720]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180343.3754144] [172.17.0.2] [Login] [] [2024-04-15 11:25:46.888428]
+INFO:     172.17.0.2:47038 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180343.3754144] [172.17.0.2] [Login] [] [2024-04-15 11:25:46.893959]
+INFO:     172.17.0.2:47046 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180343.3754144] [172.17.0.2] [FriendList] [session_id=KcxlTe2LV6SHacXN] [2024-04-15 11:25:46.897946]
+[INFO]: Intention [2024-04-15 11:25:46.900094]
+INFO:     172.17.0.2:47056 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180343.3754144] [172.17.0.2] [Login] [] [2024-04-15 11:25:48.000452]
+INFO:     172.17.0.2:47072 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180343.3754144] [172.17.0.2] [Login] [] [2024-04-15 11:25:48.005004]
+INFO:     172.17.0.2:47088 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180343.3754144] [172.17.0.2] [FriendList] [session_id=PVVwpGKYsjNVrlRr] [2024-04-15 11:25:48.009018]
+INFO:     172.17.0.2:47092 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [720]
+INFO:     Started server process [723]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [723]
+INFO:     Started server process [724]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180517.215223] [172.17.0.2] [Login] [] [2024-04-15 11:28:39.418442]
+INFO:     172.17.0.2:46610 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180517.215223] [172.17.0.2] [Login] [] [2024-04-15 11:28:39.423768]
+INFO:     172.17.0.2:46612 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180517.215223] [172.17.0.2] [FriendList] [session_id=0hshYX9V5kq9VHvj] [2024-04-15 11:28:39.427471]
+INFO:     172.17.0.2:46618 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [724]
+INFO:     Started server process [726]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [726]
+INFO:     Started server process [727]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180558.6976838] [172.17.0.2] [Login] [] [2024-04-15 11:29:21.177216]
+INFO:     172.17.0.2:57646 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180558.6976838] [172.17.0.2] [Login] [] [2024-04-15 11:29:21.183066]
+INFO:     172.17.0.2:57656 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180558.6976838] [172.17.0.2] [FriendList] [session_id=smY2vCp3XSitrFLO] [2024-04-15 11:29:21.186962]
+INFO:     172.17.0.2:57658 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [727]
+INFO:     Started server process [729]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [729]
+INFO:     Started server process [730]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180578.3538122] [172.17.0.2] [Login] [] [2024-04-15 11:29:40.033648]
+INFO:     172.17.0.2:56956 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180578.3538122] [172.17.0.2] [Login] [] [2024-04-15 11:29:40.039254]
+INFO:     172.17.0.2:56958 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180578.3538122] [172.17.0.2] [FriendList] [session_id=smvw7vaMwyWttQke] [2024-04-15 11:29:40.043465]
+INFO:     172.17.0.2:56974 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [730]
+INFO:     Started server process [732]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [732]
+INFO:     Started server process [733]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180609.8202946] [172.17.0.2] [Login] [] [2024-04-15 11:30:12.513808]
+INFO:     172.17.0.2:57208 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180609.8202946] [172.17.0.2] [Login] [] [2024-04-15 11:30:12.519000]
+INFO:     172.17.0.2:57214 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180609.8202946] [172.17.0.2] [FriendList] [session_id=tOULyKpJ15ChftCM] [2024-04-15 11:30:12.522884]
+INFO:     172.17.0.2:57228 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [733]
+INFO:     Started server process [735]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [735]
+INFO:     Started server process [736]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180626.3857198] [172.17.0.2] [Login] [] [2024-04-15 11:30:29.290958]
+INFO:     172.17.0.2:47888 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180626.3857198] [172.17.0.2] [Login] [] [2024-04-15 11:30:29.296383]
+INFO:     172.17.0.2:47890 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180626.3857198] [172.17.0.2] [FriendList] [session_id=uj3CY2UzaSegKB2D] [2024-04-15 11:30:29.301294]
+INFO:     172.17.0.2:47902 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [736]
+INFO:     Started server process [738]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180648.9427147] [172.17.0.2] [Login] [] [2024-04-15 11:30:50.945060]
+INFO:     172.17.0.2:50314 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180648.9427147] [172.17.0.2] [Login] [] [2024-04-15 11:30:50.950038]
+INFO:     172.17.0.2:50330 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180648.9427147] [172.17.0.2] [FriendList] [session_id=gfGlKnNTh0v1BIb3] [2024-04-15 11:30:50.953704]
+INFO:     172.17.0.2:50338 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [738]
+INFO:     Started server process [740]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [740]
+INFO:     Started server process [741]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180743.9217787] [172.17.0.2] [Login] [] [2024-04-15 11:32:25.216099]
+INFO:     172.17.0.2:53036 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180743.9217787] [172.17.0.2] [Login] [] [2024-04-15 11:32:25.221209]
+INFO:     172.17.0.2:53038 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180743.9217787] [172.17.0.2] [FriendList] [session_id=nifek4jc4Y5WN3FD] [2024-04-15 11:32:25.225016]
+INFO:     172.17.0.2:53048 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [741]
+INFO:     Started server process [743]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [743]
+INFO:     Started server process [744]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713180800.5366507] [172.17.0.2] [Login] [] [2024-04-15 11:33:23.011114]
+INFO:     172.17.0.2:46818 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180800.5366507] [172.17.0.2] [Login] [] [2024-04-15 11:33:23.016221]
+INFO:     172.17.0.2:46834 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713180800.5366507] [172.17.0.2] [FriendList] [session_id=kIgSgeLKEa1iQou9] [2024-04-15 11:33:23.020501]
+INFO:     172.17.0.2:46844 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [744]
+INFO:     Started server process [746]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

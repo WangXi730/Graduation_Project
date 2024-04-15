@@ -22,7 +22,7 @@ actions = {
     "Logon": (user.Logon,"用户注册","ekkowwang") ,
     "Update": (user.Update,"用户提交个人数据","ekkowwang") ,
     "GetMessage": (user.GetMessage,"获取消息","ekkowwang") ,
-    # "FriendList": (user.FriendList,"好友列表","ekkowwang"),
+    "FriendList": (user.FriendList,"好友列表","ekkowwang"),
 }
 
 
@@ -45,12 +45,12 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
             if action == "Login":
                 #首次获取session_id
                 session_id = user.create_session(data.get("id"))
-            elif action == "logon":
+            elif action == "Logon":
                 #无需获取session_id
                 pass
             else:
                 #处理session_id
-                old_session_id = cookie[12:]
+                old_session_id = cookie[11:]
                 st_time = time.time()
                 while session_id == None:
                     session_id = user.create_session(data.get("id"),old_session_id)

@@ -64,7 +64,16 @@ def check_username_or_password(data):
         return False
     return True
     
+create_sql_list = [
+    'CREATE TABLE {user_id}_friend (id BIGINT PRIMARY KEY,status VARCHAR(10))',
+]
 
+# 创建用户时调用
+def create_others(id,cursor):
+    for sql in create_sql_list:
+        cursor.execute(sql.format(user_id=id))
+    return True
+    
 class Logon(object):
     def __init__(self) -> None:
         self.client_redis = redis.Redis(host=REDIS_CONF["host"], port=REDIS_CONF["port"], db=REDIS_CONF["db"])
@@ -112,10 +121,13 @@ class Logon(object):
     def create_user(self, id, username, password):
         try:
             sql = f"insert into {TB_USER} (id, username, password) values (%s, %s, %s)"
-            self.client_mysql.cursor().execute(sql, (id, username, password))
+            cursor = self.client_mysql.cursor()
+            cursor.execute(sql, (id, username, password))
+            create_others(id,cursor)
             self.client_mysql.commit()
             return True
         except Exception as e:
+            self.client_mysql.rollback()
             log.error(f"Logon.create_user,erro_mess:{e}")
             return False
 
@@ -190,16 +202,16 @@ class Update(object):
                     args = (self.id, self.new_data[i], )
                     cursor = self.client_mysql.cursor()
                     cursor.execute(sql,args)
-                    self.client_mysql.commit()
                 else:
                     sql = f'update {d_table} set {d_type}=%s where id=%s'
                     args = (self.new_data[i], self.id,)
                     cursor = self.client_mysql.cursor()
                     cursor.execute(sql,args)
-                    self.client_mysql.commit()
+            self.client_mysql.commit()
             return True
                     
         except Exception as e:
+            self.client_mysql.rollback()
             log.error(f'Update.process error:'+str(e))
             return False
         
@@ -292,5 +304,125 @@ class GetMessage(object):
         except:
             return None
         
+
+class FriendList(object):
+    def __init__(self)->None:
+        self.mysql_cli = pymysql.connect(**MYSQL_CONF)
+    
+    def run(self,data):
+        # 检查信息是否齐全
+        self.data = data
+        self.check_request()
+        if not self.check_request():
+            return CODE_OK,{'success' : False , "mess":"parameter incomplete"}
         
+        # 判断用户是否存在
+        if not id_exist('tb_user', self.dest_id):
+            return CODE_OK,{"success" : False,"mess":"Destination User does not existst"}
         
+        # 执行添加或删除操作
+        if self.process():
+            return CODE_OK, {"success" : True, "mess":""}
+        else:
+            return CODE_OK, {"success" : False, "mess":""}
+        
+    def process(self):
+        try:
+            cursor = self.mysql_cli.cursor()
+            if self.friendAction == 0:
+                # 发起好友意向
+                # 查询对方是否对自己有好友意向
+                sql = f"SELECT status FROM `{self.id}_friend` WHERE id = {self.dest_id}" #这里直接嵌入是因为之前检查过两个id，不存在注入风险
+                cursor.execute(sql)
+                result = cursor.fetchone()
+                if result != None and len(result) > 0:
+                    result = result[0]
+                if result == 'Request':
+                    # 对方已经具备意向，修改这个状态为Intention即可
+                    sql = f"UPDATE `{self.id}_friend` SET status = 'Intention' WHERE id = {self.dest_id}"
+                    cursor.execute(sql)
+                elif result == 'Black':
+                    # 在黑名单中，查看对方是否对自己有意向，如果有，加为好友，如果没有，去除黑名单
+                    sql = f"SELECT status FROM `{self.dest_id}_friend` WHERE id = {self.id}"
+                    cursor.execute(sql)
+                    ret = cursor.fetchone()
+                    if ret != None and len(ret) > 0:
+                        ret = ret[0]
+                    if ret == 'Intention':
+                        sql = f"UPDATE `{self.id}_friend` SET status = 'Intention' WHERE id = {self.dest_id}"
+                    else:
+                        sql = f"DELETE FROM `{self.id}_friend` WHERE id = {self.dest_id}"
+                    cursor.execute(sql)
+                elif result == 'Intention':
+                    # 已是好友关系，无需处理
+                    pass
+                else:
+                    # 对方还没有意向，新增一条记录录
+                    sql = f"INSERT INTO `{self.id}_friend` VALUES({self.dest_id}, 'Intention')"
+                    cursor.execute(sql)
+                    # 同时，应该向对方告知这个消息
+                    # 但这有个前提：对方没有将自己加入黑名单
+                    sql = f'SELECT status FROM `{self.dest_id}_friend` WHERE id = {self.id}'
+                    cursor.execute(sql)
+                    ret = cursor.fetchone()
+                    if ret != None and len(ret) > 0:
+                        ret = ret[0]
+                    if ret == 'Black':
+                        # 被拉入黑名单，不予通知对方
+                        pass
+                    else:
+                        # 通知对方
+                        sql = f"INSERT INTO `{self.dest_id}_friend` VALUES({self.id}, 'Request')"
+                        cursor.execute(sql)
+            elif self.friendAction == 1:
+                # 撤回好友申请/删除好友
+                # 查看对方是否对自己有意向
+                # 逻辑非常简单，删除自己和对方的记录即可
+                sql = f"DELETE FROM `{self.id}_friend` WHERE id = {self.dest_id}"
+                cursor.execute(sql)
+                # 如果是黑名单，就不需要删对方的了
+                sql = f"SELECT status FROM `{self.dest_id}_friend` WHERE id = {self.id}"
+                cursor.execute(sql)
+                ret = cursor.fetchone()
+                if ret != None and len(ret) > 0:
+                    ret = ret[0]
+                if ret != 'Black':
+                    sql = f"DELETE FROM `{self.dest_id}_friend` WHERE id = {self.id}"
+                    cursor.execute(sql)
+            elif self.friendAction == 2:
+                # 查看对方是否在自己的列表里
+                sql = f"SELECT status FROM `{self.id}_friend` WHERE id = {self.dest_id}"
+                cursor.execute(sql)
+                ret = cursor.fetchone()
+                if ret != None and len(ret) > 0:
+                    # 对方在自己的列表里
+                    if ret[0] != 'Black':
+                        log.info(ret[0])
+                        # 修改
+                        sql = f"UPDATE `{self.id}_friend` SET status = 'Black' WHERE id = {self.dest_id}"
+                        cursor.execute(sql)
+                    else:
+                        # 已是黑名单，无需再处理
+                        pass
+                else:
+                    # 不在列表里，插入黑名单信息
+                    sql = f"INSERT INTO `{self.id}_friend` VALUES({self.dest_id}, 'Black')"
+                    cursor.execute(sql)
+            else:
+                return False
+            self.mysql_cli.commit()
+            return True
+        except Exception as e:
+            log.error(e)
+            self.mysql_cli.rollback()
+            return False
+        
+    
+    def check_request(self):
+        self.id = self.data.get("id", None)
+        self.dest_id = self.data.get("dest_id", None)
+        self.friendAction = self.data.get("friendAction", None)
+        if self.id is None or self.dest_id is None or self.friendAction is None:
+            return False
+        return True
+    

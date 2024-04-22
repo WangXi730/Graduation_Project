@@ -26,7 +26,15 @@ CREATE TABLE tb_index (
   data_table VARCHAR(20)
 );
 '''
-
+TB_GROUP = "group_map" #用于存储数据存放位置，创建表的sql语句如下：
+'''
+CREATE TABLE group_map (
+    group_id BIGINT PRIMARY KEY,
+    group_name CHAR(20),
+    user_list TEXT,
+    user_count SMALLINT
+);
+'''
 
 REDIS_CONF = {
     "host": "172.17.0.6",

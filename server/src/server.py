@@ -23,6 +23,7 @@ actions = {
     "Update": (user.Update,"用户提交个人数据","ekkowwang") ,
     "GetMessage": (user.GetMessage,"获取消息","ekkowwang") ,
     "FriendList": (user.FriendList,"好友列表","ekkowwang"),
+    "CreateGroup" : (user.CreateGroup, "创建群聊","ekkowwang"),
 }
 
 
@@ -57,16 +58,18 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
                     if time.time()-st_time > 10:
                         break
                 if session_id == None:
-                    return {"StatusCode":CODE_ERROR, "ret":"get session timeout"}
+                    return {"StatusCode":CODE_ERROR, "Response":"get session timeout"}
                 elif  session_id == "error":
-                    return {"StatusCode":CODE_ERROR, "ret":"get session error, place login age!"}
+                    return {"StatusCode":CODE_ERROR, "Response":"get session error, place login age!"}
             func, desc, owner = actions.get(action)
             code, result = func().run(data)
-        ret = {"StatusCode":code, "ret":result}
+            if action == 'Login' and result.get('success') == False:
+                session_id = None
+        ret = {"StatusCode":code, "Response":result}
         
     except Exception as e:
         log.error(f"[{request_id}] [{request_ip}] [{action}] [{cookie}] [{e}]")
-        ret = {"StatusCode":CODE_ERROR, "ret":str(e)}
+        ret = {"StatusCode":CODE_ERROR, "Response":str(e)}
     
     if session_id != None:
         response.set_cookie(key="session_id", value=session_id)

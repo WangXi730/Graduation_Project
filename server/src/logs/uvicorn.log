@@ -926,3 +926,1626 @@ INFO:     Finished server process [744]
 INFO:     Started server process [746]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [746]
+INFO:     Started server process [3095]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3095]
+INFO:     Started server process [3096]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3096]
+INFO:     Started server process [3097]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3097]
+INFO:     Started server process [3098]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3098]
+INFO:     Started server process [3099]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3099]
+INFO:     Started server process [3102]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3102]
+INFO:     Started server process [3103]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3103]
+INFO:     Started server process [3104]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3104]
+INFO:     Started server process [3105]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3105]
+INFO:     Started server process [3106]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3106]
+INFO:     Started server process [3107]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3107]
+INFO:     Started server process [3108]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3108]
+INFO:     Started server process [3109]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3109]
+INFO:     Started server process [3110]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3110]
+INFO:     Started server process [3111]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3111]
+INFO:     Started server process [3112]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3112]
+INFO:     Started server process [3115]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3115]
+INFO:     Started server process [3116]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3116]
+INFO:     Started server process [3117]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'config/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3117]
+INFO:     Started server process [3118]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3118]
+INFO:     Started server process [3119]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3119]
+INFO:     Started server process [3120]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3120]
+INFO:     Started server process [3121]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3121]
+Process SpawnProcess-98:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 526
+    
+    ^
+IndentationError: expected an indented block after function definition on line 522
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+Process SpawnProcess-99:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 526
+    
+    ^
+IndentationError: expected an indented block after function definition on line 522
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Started server process [3140]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3140]
+INFO:     Started server process [3141]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3141]
+INFO:     Started server process [3142]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3142]
+INFO:     Started server process [3143]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3143]
+INFO:     Started server process [3144]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3144]
+INFO:     Started server process [3145]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3145]
+INFO:     Started server process [3146]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3146]
+INFO:     Started server process [3147]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3147]
+Process SpawnProcess-108:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1517, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/workstation/src/other/Graduation_Project/server/src/server.py", line 9, in <module>
+    from logic import user
+  File "/workstation/src/other/Graduation_Project/server/src/logic/user.py", line 544
+    sql = 'INSERT INTO `{TB_GROUP}` (user_list, group_count) VALUES (%s)'
+                                                                         ^
+IndentationError: unindent does not match any outer indentation level
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Started server process [3149]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3149]
+INFO:     Started server process [3150]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3150]
+INFO:     Started server process [3151]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3151]
+INFO:     Started server process [3152]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3152]
+INFO:     Started server process [3153]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3153]
+INFO:     Started server process [3154]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3154]
+INFO:     Started server process [3155]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3155]
+INFO:     Started server process [3156]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3156]
+INFO:     Started server process [3739]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3739]
+INFO:     Started server process [3740]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3740]
+INFO:     Started server process [3741]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3741]
+INFO:     Started server process [3742]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3742]
+INFO:     Started server process [3743]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3743]
+INFO:     Started server process [3744]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3744]
+INFO:     Started server process [3745]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3745]
+INFO:     Started server process [3746]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713785830.7480884] [172.17.0.1] [Logon] [] [2024-04-22 11:37:31.741041]
+INFO:     172.17.0.1:36324 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3746]
+INFO:     Started server process [3747]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3747]
+INFO:     Started server process [3748]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3748]
+INFO:     Started server process [3749]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3749]
+INFO:     Started server process [3750]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3750]
+INFO:     Started server process [3751]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3751]
+INFO:     Started server process [3752]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3752]
+INFO:     Started server process [3753]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3753]
+INFO:     Started server process [3754]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3754]
+INFO:     Started server process [3755]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3755]
+INFO:     Started server process [3756]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3756]
+INFO:     Started server process [3757]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3757]
+INFO:     Started server process [3758]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3758]
+INFO:     Started server process [3759]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3759]
+INFO:     Started server process [3760]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3760]
+INFO:     Started server process [3763]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3763]
+INFO:     Started server process [3764]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3764]
+INFO:     Started server process [3765]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3765]
+INFO:     Started server process [3766]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3766]
+INFO:     Started server process [3767]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3767]
+INFO:     Started server process [3768]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3768]
+INFO:     Started server process [3769]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3769]
+INFO:     Started server process [3770]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3770]
+INFO:     Started server process [3771]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3771]
+INFO:     Started server process [3772]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3772]
+INFO:     Started server process [3773]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3773]
+INFO:     Started server process [3775]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3775]
+INFO:     Started server process [3776]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3776]
+INFO:     Started server process [3777]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3777]
+INFO:     Started server process [3778]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3778]
+INFO:     Started server process [3779]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3779]
+INFO:     Started server process [3780]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3780]
+INFO:     Started server process [3781]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3781]
+INFO:     Started server process [3782]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713787702.2797804] [172.17.0.1] [Logon] [] [2024-04-22 12:09:02.437094]
+INFO:     172.17.0.1:53070 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3782]
+INFO:     Started server process [3795]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713787937.8387098] [172.17.0.1] [Logon] [] [2024-04-22 12:12:23.169390]
+INFO:     172.17.0.1:52034 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3795]
+INFO:     Started server process [3796]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3796]
+INFO:     Started server process [3797]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3797]
+INFO:     Started server process [3798]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788103.3898911] [172.17.0.1] [Logon] [] [2024-04-22 12:15:05.933898]
+INFO:     172.17.0.1:48748 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3798]
+INFO:     Started server process [3799]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788143.3564115] [172.17.0.1] [Logon] [] [2024-04-22 12:15:44.784683]
+INFO:     172.17.0.1:38912 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3799]
+INFO:     Started server process [3800]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788167.6985264] [172.17.0.1] [Logon] [] [2024-04-22 12:16:08.760900]
+INFO:     172.17.0.1:33916 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3800]
+INFO:     Started server process [3801]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788176.9133265] [172.17.0.1] [Logon] [] [2024-04-22 12:16:17.585559]
+INFO:     172.17.0.1:47840 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3801]
+INFO:     Started server process [3802]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788233.8232007] [172.17.0.1] [Logon] [] [2024-04-22 12:17:20.528885]
+INFO:     172.17.0.1:60954 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [Logon] [] [2024-04-22 12:17:20.576389]
+INFO:     172.17.0.1:60966 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [Logon] [] [2024-04-22 12:17:20.620116]
+INFO:     172.17.0.1:60978 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [Login] [] [2024-04-22 12:17:20.690086]
+INFO:     172.17.0.1:60984 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [Login] [] [2024-04-22 12:17:20.694434]
+INFO:     172.17.0.1:60996 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [Login] [] [2024-04-22 12:17:20.698878]
+INFO:     172.17.0.1:60998 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [FriendList] [session_id=hNUzJoeSCPiCmLx1] [2024-04-22 12:17:20.702843]
+INFO:     172.17.0.1:32776 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [FriendList] [session_id=hNUzJoeSCPiCmLx1] [2024-04-22 12:17:20.711509]
+INFO:     172.17.0.1:32784 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [FriendList] [session_id=MeQcqDJHUB6VFh7v] [2024-04-22 12:17:20.714022]
+INFO:     172.17.0.1:32790 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [FriendList] [session_id=MeQcqDJHUB6VFh7v] [2024-04-22 12:17:20.721570]
+INFO:     172.17.0.1:32802 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [FriendList] [session_id=eScSSzitzWCJ1pga] [2024-04-22 12:17:20.724001]
+INFO:     172.17.0.1:32816 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [FriendList] [session_id=eScSSzitzWCJ1pga] [2024-04-22 12:17:20.733937]
+INFO:     172.17.0.1:32830 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788233.8232007] [172.17.0.1] [CreateGroup] [session_id=hNUzJoeSCPiCmLx1] [2024-04-22 12:17:20.736380]
+INFO:     172.17.0.1:32834 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3802]
+INFO:     Started server process [3804]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3804]
+INFO:     Started server process [3805]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788325.567565] [172.17.0.1] [Logon] [] [2024-04-22 12:18:48.329949]
+INFO:     172.17.0.1:36878 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [Logon] [] [2024-04-22 12:18:48.375093]
+INFO:     172.17.0.1:36882 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [Logon] [] [2024-04-22 12:18:48.413466]
+INFO:     172.17.0.1:36886 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [Login] [] [2024-04-22 12:18:48.453452]
+INFO:     172.17.0.1:36890 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [Login] [] [2024-04-22 12:18:48.457773]
+INFO:     172.17.0.1:36894 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [Login] [] [2024-04-22 12:18:48.462011]
+INFO:     172.17.0.1:36902 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [FriendList] [session_id=18A7xBzg6rfD0xOw] [2024-04-22 12:18:48.466406]
+INFO:     172.17.0.1:36912 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [FriendList] [session_id=l8NjF1n9ElQs9sjy] [2024-04-22 12:18:48.474454]
+INFO:     172.17.0.1:36916 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [FriendList] [session_id=Jda89iX7O4SBW3wd] [2024-04-22 12:18:48.486995]
+INFO:     172.17.0.1:36922 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [FriendList] [session_id=iscmSqCi0Kau5lCx] [2024-04-22 12:18:48.494673]
+INFO:     172.17.0.1:36934 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [FriendList] [session_id=yzHy1XcsUPBbITn0] [2024-04-22 12:18:48.506824]
+INFO:     172.17.0.1:36938 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [FriendList] [session_id=7EUgGva2JtAQ1tAK] [2024-04-22 12:18:48.513927]
+INFO:     172.17.0.1:36942 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788325.567565] [172.17.0.1] [CreateGroup] [session_id=bS2JMxdd2gKDtQ8P] [2024-04-22 12:18:48.520774]
+INFO:     172.17.0.1:36948 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3805]
+INFO:     Started server process [3808]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788603.4089305] [172.17.0.1] [Logon] [] [2024-04-22 12:23:28.292746]
+INFO:     172.17.0.1:33892 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [Logon] [] [2024-04-22 12:23:28.333173]
+INFO:     172.17.0.1:33906 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [Logon] [] [2024-04-22 12:23:28.371649]
+INFO:     172.17.0.1:33912 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [Login] [] [2024-04-22 12:23:28.408157]
+INFO:     172.17.0.1:33926 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [Login] [] [2024-04-22 12:23:28.412881]
+INFO:     172.17.0.1:33938 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [Login] [] [2024-04-22 12:23:28.417617]
+INFO:     172.17.0.1:33950 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [FriendList] [session_id=ffGgzWo71FpMbjQW] [2024-04-22 12:23:28.422198]
+INFO:     172.17.0.1:33956 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [FriendList] [session_id=waejcyfYuGSzs7A5] [2024-04-22 12:23:28.429401]
+INFO:     172.17.0.1:33962 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [FriendList] [session_id=qXfr346qSMdptVKM] [2024-04-22 12:23:28.440845]
+INFO:     172.17.0.1:33966 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [FriendList] [session_id=gaN5uQRhkztIxzwc] [2024-04-22 12:23:28.447698]
+INFO:     172.17.0.1:33978 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [FriendList] [session_id=Iny9GhGi1r9qliyC] [2024-04-22 12:23:28.460545]
+INFO:     172.17.0.1:33992 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [FriendList] [session_id=dpfTCqJduswEDhDj] [2024-04-22 12:23:28.467206]
+INFO:     172.17.0.1:34008 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788603.4089305] [172.17.0.1] [CreateGroup] [session_id=Uz3z2RYxrOryyZFB] [2024-04-22 12:23:28.473752]
+INFO:     172.17.0.1:34010 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3808]
+INFO:     Started server process [3810]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3810]
+INFO:     Started server process [3811]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3811]
+INFO:     Started server process [3813]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:24:56.893882]
+INFO:     172.17.0.1:55376 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:24:56.939219]
+INFO:     172.17.0.1:55390 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:24:56.983598]
+INFO:     172.17.0.1:55404 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:24:57.028846]
+INFO:     172.17.0.1:55408 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:24:57.033251]
+INFO:     172.17.0.1:55424 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:24:57.037346]
+INFO:     172.17.0.1:55432 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=I5VAWtIrqRFW94he] [2024-04-22 12:24:57.041407]
+INFO:     172.17.0.1:55438 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=ExBo08zfZjmlAj1D] [2024-04-22 12:24:57.049279]
+INFO:     172.17.0.1:55442 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=lxuQdzR4yZWIFxrR] [2024-04-22 12:24:57.062603]
+INFO:     172.17.0.1:55456 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=BtJsVnOaoMpomLFR] [2024-04-22 12:24:57.069751]
+INFO:     172.17.0.1:55462 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=eYdrBbQjxaketxMM] [2024-04-22 12:24:57.085623]
+INFO:     172.17.0.1:55476 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=0Di7WDJMNbpOxudU] [2024-04-22 12:24:57.098579]
+INFO:     172.17.0.1:55490 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [CreateGroup] [session_id=CTLJcAcYuNYqghCN] [2024-04-22 12:24:57.105282]
+INFO:     172.17.0.1:55500 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:27:34.436143]
+INFO:     172.17.0.1:50262 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:27:34.489385]
+INFO:     172.17.0.1:50276 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:27:34.527587]
+INFO:     172.17.0.1:50286 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:27:34.564026]
+INFO:     172.17.0.1:50290 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:27:34.568496]
+INFO:     172.17.0.1:50298 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:27:34.572639]
+INFO:     172.17.0.1:50310 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=oyud9cgUCSBua1Ce] [2024-04-22 12:27:34.576593]
+INFO:     172.17.0.1:50326 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=hnErUm0RfsShZq9o] [2024-04-22 12:27:34.584217]
+INFO:     172.17.0.1:50328 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=TLmAHMnWWyj8rS5N] [2024-04-22 12:27:34.595168]
+INFO:     172.17.0.1:50344 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=mrLw8tKtInQ4Jwq7] [2024-04-22 12:27:34.602089]
+INFO:     172.17.0.1:50346 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=Ly3gm958yKnEMKBR] [2024-04-22 12:27:34.614968]
+INFO:     172.17.0.1:50360 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=0uMjT2qleg4ZkNcz] [2024-04-22 12:27:34.622193]
+INFO:     172.17.0.1:50370 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [CreateGroup] [session_id=JC9IKHh6pQTe7h3L] [2024-04-22 12:27:34.629344]
+INFO:     172.17.0.1:50384 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:27:35.826543]
+INFO:     172.17.0.1:50396 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:27:35.996475]
+INFO:     172.17.0.1:50404 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Logon] [] [2024-04-22 12:27:36.048924]
+INFO:     172.17.0.1:50414 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:27:36.099146]
+INFO:     172.17.0.1:50426 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:27:36.103310]
+INFO:     172.17.0.1:50432 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [Login] [] [2024-04-22 12:27:36.107332]
+INFO:     172.17.0.1:50438 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=r1xK8cOxvNNdNLvO] [2024-04-22 12:27:36.111698]
+INFO:     172.17.0.1:50446 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=8kDj9wzln2C5kiMf] [2024-04-22 12:27:36.121298]
+INFO:     172.17.0.1:50454 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=ZMQdviFuwWEt4rB5] [2024-04-22 12:27:36.142739]
+INFO:     172.17.0.1:50456 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=WFAMNW5dzJ6ZU6Jx] [2024-04-22 12:27:36.150689]
+INFO:     172.17.0.1:50470 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=9uvwa3VUpLtv1vqH] [2024-04-22 12:27:36.171379]
+INFO:     172.17.0.1:50472 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [FriendList] [session_id=xUizjV0PEWLIVFT6] [2024-04-22 12:27:36.179873]
+INFO:     172.17.0.1:50478 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788695.4428394] [172.17.0.1] [CreateGroup] [session_id=BtRCp5VRxpNfZdWd] [2024-04-22 12:27:36.191379]
+INFO:     172.17.0.1:50492 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3813]
+INFO:     Started server process [3814]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3814]
+INFO:     Started server process [3815]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3815]
+INFO:     Started server process [3816]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3816]
+INFO:     Started server process [3817]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713788968.5367923] [172.17.0.1] [Logon] [] [2024-04-22 12:29:30.111988]
+INFO:     172.17.0.1:39980 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [Logon] [] [2024-04-22 12:29:30.149509]
+INFO:     172.17.0.1:39988 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [Logon] [] [2024-04-22 12:29:30.189507]
+INFO:     172.17.0.1:40004 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [Login] [] [2024-04-22 12:29:30.232862]
+INFO:     172.17.0.1:40006 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [Login] [] [2024-04-22 12:29:30.237093]
+INFO:     172.17.0.1:40010 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [Login] [] [2024-04-22 12:29:30.241358]
+INFO:     172.17.0.1:40016 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [FriendList] [session_id=hD772qfLygNU1tJi] [2024-04-22 12:29:30.245553]
+ 1000000039 ret : 1
+[ERROR]: object of type 'int' has no len() [2024-04-22 12:29:30.247239]
+INFO:     172.17.0.1:40032 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [FriendList] [session_id=2y9uUubUAc1FpeUU] [2024-04-22 12:29:30.250055]
+ 1000000040 ret : 1
+[ERROR]: object of type 'int' has no len() [2024-04-22 12:29:30.251819]
+INFO:     172.17.0.1:40048 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [FriendList] [session_id=oiJaYtqGGAR6vdG5] [2024-04-22 12:29:30.254224]
+ 1000000038 ret : 1
+[ERROR]: object of type 'int' has no len() [2024-04-22 12:29:30.255933]
+INFO:     172.17.0.1:40054 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [FriendList] [session_id=TEDaUdtOL9zzAbD3] [2024-04-22 12:29:30.258199]
+ 1000000040 ret : 1
+[ERROR]: object of type 'int' has no len() [2024-04-22 12:29:30.259895]
+INFO:     172.17.0.1:40058 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [FriendList] [session_id=TIadahQx43n8955K] [2024-04-22 12:29:30.262755]
+ 1000000039 ret : 1
+[ERROR]: object of type 'int' has no len() [2024-04-22 12:29:30.264381]
+INFO:     172.17.0.1:40066 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [FriendList] [session_id=rfZJD4kGyNX3kJ3i] [2024-04-22 12:29:30.266723]
+ 1000000038 ret : 1
+[ERROR]: object of type 'int' has no len() [2024-04-22 12:29:30.268552]
+INFO:     172.17.0.1:40074 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713788968.5367923] [172.17.0.1] [CreateGroup] [session_id=hj2M5hLlJHQxGrlN] [2024-04-22 12:29:30.271034]
+ 1000000038 ret : 1
+[ERROR]: object of type 'int' has no len() [2024-04-22 12:29:30.272977]
+INFO:     172.17.0.1:40088 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3817]
+INFO:     Started server process [3818]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789091.2965715] [172.17.0.1] [Logon] [] [2024-04-22 12:31:39.183993]
+INFO:     172.17.0.1:59882 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [Logon] [] [2024-04-22 12:31:39.224786]
+INFO:     172.17.0.1:59884 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [Logon] [] [2024-04-22 12:31:39.261436]
+INFO:     172.17.0.1:59898 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [Login] [] [2024-04-22 12:31:39.307764]
+INFO:     172.17.0.1:59902 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [Login] [] [2024-04-22 12:31:39.312080]
+INFO:     172.17.0.1:59918 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [Login] [] [2024-04-22 12:31:39.316721]
+INFO:     172.17.0.1:59934 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [FriendList] [session_id=sFxM7DwCJ4JnlyjM] [2024-04-22 12:31:39.321409]
+[ERROR]: 'int' object has no attribute 'fetchone' [2024-04-22 12:31:39.323418]
+INFO:     172.17.0.1:59940 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [FriendList] [session_id=zuTavocn31nGvI31] [2024-04-22 12:31:39.326329]
+[ERROR]: 'int' object has no attribute 'fetchone' [2024-04-22 12:31:39.328205]
+INFO:     172.17.0.1:59948 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [FriendList] [session_id=WX14ZRix4xoA8N2j] [2024-04-22 12:31:39.330650]
+[ERROR]: 'int' object has no attribute 'fetchone' [2024-04-22 12:31:39.332308]
+INFO:     172.17.0.1:59956 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [FriendList] [session_id=5gko2sq9sjiRRPsf] [2024-04-22 12:31:39.334710]
+[ERROR]: 'int' object has no attribute 'fetchone' [2024-04-22 12:31:39.336537]
+INFO:     172.17.0.1:59958 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [FriendList] [session_id=sDURkKZLPGOmoRJS] [2024-04-22 12:31:39.338855]
+[ERROR]: 'int' object has no attribute 'fetchone' [2024-04-22 12:31:39.340466]
+INFO:     172.17.0.1:59968 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [FriendList] [session_id=R8Ohg7vKvy3jFUzy] [2024-04-22 12:31:39.342986]
+[ERROR]: 'int' object has no attribute 'fetchone' [2024-04-22 12:31:39.344845]
+INFO:     172.17.0.1:59972 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789091.2965715] [172.17.0.1] [CreateGroup] [session_id=dvd1hEnMM3r5NOEx] [2024-04-22 12:31:39.347432]
+[ERROR]: 'int' object has no attribute 'fetchone' [2024-04-22 12:31:39.349261]
+INFO:     172.17.0.1:59984 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3818]
+INFO:     Started server process [3819]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789148.2400072] [172.17.0.1] [Logon] [] [2024-04-22 12:32:30.015330]
+INFO:     172.17.0.1:55152 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [Logon] [] [2024-04-22 12:32:30.076016]
+INFO:     172.17.0.1:55168 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [Logon] [] [2024-04-22 12:32:30.129432]
+INFO:     172.17.0.1:55182 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [Login] [] [2024-04-22 12:32:30.184687]
+INFO:     172.17.0.1:55198 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [Login] [] [2024-04-22 12:32:30.190131]
+INFO:     172.17.0.1:55212 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [Login] [] [2024-04-22 12:32:30.194717]
+INFO:     172.17.0.1:55218 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [FriendList] [session_id=65OJe1vU1xCHW24Z] [2024-04-22 12:32:30.198981]
+ 1000000045 ret : (1000000045,)
+(1000000045,)
+INFO:     172.17.0.1:55234 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [FriendList] [session_id=JmW1BtQh9LaG9C5Y] [2024-04-22 12:32:30.206778]
+ 1000000046 ret : (1000000046,)
+(1000000046,)
+INFO:     172.17.0.1:55248 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [FriendList] [session_id=3MiDwU1LUTidBMNQ] [2024-04-22 12:32:30.219487]
+ 1000000044 ret : (1000000044,)
+(1000000044,)
+INFO:     172.17.0.1:55256 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [FriendList] [session_id=Utnq9oXiFRB98WFd] [2024-04-22 12:32:30.227619]
+ 1000000046 ret : (1000000046,)
+(1000000046,)
+INFO:     172.17.0.1:55262 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [FriendList] [session_id=co9PF9UjRjrPlwxH] [2024-04-22 12:32:30.244049]
+ 1000000045 ret : (1000000045,)
+(1000000045,)
+INFO:     172.17.0.1:55274 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [FriendList] [session_id=iTpXnVsvLQy6NOXv] [2024-04-22 12:32:30.251879]
+ 1000000044 ret : (1000000044,)
+(1000000044,)
+INFO:     172.17.0.1:55288 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789148.2400072] [172.17.0.1] [CreateGroup] [session_id=i3uWnE4PF476eXly] [2024-04-22 12:32:30.258914]
+ 1000000044 ret : (1000000044,)
+(1000000044,)
+ 1000000045 ret : (1000000045,)
+(1000000045,)
+INFO:     172.17.0.1:55292 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3819]
+INFO:     Started server process [3820]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789195.2708402] [172.17.0.1] [Logon] [] [2024-04-22 12:33:16.818666]
+INFO:     172.17.0.1:44590 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [Logon] [] [2024-04-22 12:33:16.861159]
+INFO:     172.17.0.1:44596 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [Logon] [] [2024-04-22 12:33:16.915232]
+INFO:     172.17.0.1:44606 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [Login] [] [2024-04-22 12:33:16.953990]
+INFO:     172.17.0.1:44618 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [Login] [] [2024-04-22 12:33:16.958301]
+INFO:     172.17.0.1:44632 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [Login] [] [2024-04-22 12:33:16.962735]
+INFO:     172.17.0.1:44648 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [FriendList] [session_id=PZQ87EHRtC1jY1yy] [2024-04-22 12:33:16.967183]
+2
+INFO:     172.17.0.1:44660 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [FriendList] [session_id=jpBLE5YKK1twnG1V] [2024-04-22 12:33:16.975470]
+2
+INFO:     172.17.0.1:44666 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [FriendList] [session_id=lnRfmbEk6TPLrzWR] [2024-04-22 12:33:16.987805]
+2
+INFO:     172.17.0.1:44680 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [FriendList] [session_id=6qoNR7zey3gthF9k] [2024-04-22 12:33:16.995058]
+2
+INFO:     172.17.0.1:44694 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [FriendList] [session_id=HElRE3ppyuWLTDY6] [2024-04-22 12:33:17.009711]
+2
+INFO:     172.17.0.1:44700 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [FriendList] [session_id=JdzpMNidZULwM99a] [2024-04-22 12:33:17.018117]
+2
+INFO:     172.17.0.1:44712 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789195.2708402] [172.17.0.1] [CreateGroup] [session_id=nQoGE6OlNhPlL8Th] [2024-04-22 12:33:17.024957]
+2
+2
+INFO:     172.17.0.1:44714 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3820]
+INFO:     Started server process [3821]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3821]
+INFO:     Started server process [3822]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3822]
+INFO:     Started server process [3823]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789411.539088] [172.17.0.1] [Logon] [] [2024-04-22 12:37:00.206408]
+INFO:     172.17.0.1:37544 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [Logon] [] [2024-04-22 12:37:00.252136]
+INFO:     172.17.0.1:37558 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [Logon] [] [2024-04-22 12:37:00.289804]
+INFO:     172.17.0.1:37574 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [Login] [] [2024-04-22 12:37:00.335244]
+INFO:     172.17.0.1:37582 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [Login] [] [2024-04-22 12:37:00.340005]
+INFO:     172.17.0.1:37584 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [Login] [] [2024-04-22 12:37:00.344490]
+INFO:     172.17.0.1:37598 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [FriendList] [session_id=DQA3S0C3qqtqrSDo] [2024-04-22 12:37:00.348759]
+INFO:     172.17.0.1:37604 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [FriendList] [session_id=LvRngTGaqcLjRUSX] [2024-04-22 12:37:00.356837]
+INFO:     172.17.0.1:37618 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [FriendList] [session_id=RF2DWYlAgCA6OUuk] [2024-04-22 12:37:00.367929]
+INFO:     172.17.0.1:37626 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [FriendList] [session_id=inllJCbVzr6IJ4TU] [2024-04-22 12:37:00.375388]
+INFO:     172.17.0.1:37638 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [FriendList] [session_id=CGVZbizDRPQOd9N4] [2024-04-22 12:37:00.391353]
+INFO:     172.17.0.1:37648 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [FriendList] [session_id=vRMkDjoWVEzN3ylb] [2024-04-22 12:37:00.398331]
+INFO:     172.17.0.1:37652 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789411.539088] [172.17.0.1] [CreateGroup] [session_id=1MQWJTMoLyAQIGa4] [2024-04-22 12:37:00.405554]
+1000000051 and 1000000050 not friends
+INFO:     172.17.0.1:37666 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3823]
+INFO:     Started server process [3824]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3824]
+INFO:     Started server process [3825]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789531.218546] [172.17.0.1] [Logon] [] [2024-04-22 12:38:55.868405]
+INFO:     172.17.0.1:33334 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [Logon] [] [2024-04-22 12:38:55.902387]
+INFO:     172.17.0.1:33344 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [Logon] [] [2024-04-22 12:38:55.945870]
+INFO:     172.17.0.1:33348 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [Login] [] [2024-04-22 12:38:55.987383]
+INFO:     172.17.0.1:33354 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [Login] [] [2024-04-22 12:38:55.991773]
+INFO:     172.17.0.1:33370 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [Login] [] [2024-04-22 12:38:55.996464]
+INFO:     172.17.0.1:33380 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [FriendList] [session_id=B0SEdsDyYohBL7ZH] [2024-04-22 12:38:56.000620]
+INFO:     172.17.0.1:33384 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [FriendList] [session_id=n5SreMBoHs3PzzLL] [2024-04-22 12:38:56.008037]
+INFO:     172.17.0.1:33392 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [FriendList] [session_id=XRYdCCoGaZr6H4K2] [2024-04-22 12:38:56.021329]
+INFO:     172.17.0.1:33394 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [FriendList] [session_id=am505MSACDPgfLfg] [2024-04-22 12:38:56.028498]
+INFO:     172.17.0.1:33396 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [FriendList] [session_id=KUOeAPo4uvpCHj5C] [2024-04-22 12:38:56.046102]
+INFO:     172.17.0.1:33400 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [FriendList] [session_id=NDwDKbYlR7RWPq0k] [2024-04-22 12:38:56.054226]
+INFO:     172.17.0.1:33404 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789531.218546] [172.17.0.1] [CreateGroup] [session_id=zUbBXn1oNT75Fleu] [2024-04-22 12:38:56.061240]
+[ERROR]: (1146, "Table 'graduation_project.tb_group' doesn't exist") [2024-04-22 12:38:56.066542]
+INFO:     172.17.0.1:33418 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'config/config.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3825]
+INFO:     Started server process [3826]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789659.7787547] [172.17.0.1] [Logon] [] [2024-04-22 12:41:08.172067]
+INFO:     172.17.0.1:51720 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [Logon] [] [2024-04-22 12:41:08.219817]
+INFO:     172.17.0.1:51728 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [Logon] [] [2024-04-22 12:41:08.269614]
+INFO:     172.17.0.1:51740 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [Login] [] [2024-04-22 12:41:08.335951]
+INFO:     172.17.0.1:51746 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [Login] [] [2024-04-22 12:41:08.340572]
+INFO:     172.17.0.1:51758 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [Login] [] [2024-04-22 12:41:08.344893]
+INFO:     172.17.0.1:51764 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [FriendList] [session_id=dwgY4maEH2rv4HAR] [2024-04-22 12:41:08.349065]
+INFO:     172.17.0.1:51768 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [FriendList] [session_id=1Yrq15PdEuM9rnlG] [2024-04-22 12:41:08.357140]
+INFO:     172.17.0.1:51772 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [FriendList] [session_id=VCK2uUVa4imm9Mbl] [2024-04-22 12:41:08.369248]
+INFO:     172.17.0.1:51782 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [FriendList] [session_id=NS4zxLqBv2nhs394] [2024-04-22 12:41:08.376610]
+INFO:     172.17.0.1:51794 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [FriendList] [session_id=hRgpQJMnntov6Oqc] [2024-04-22 12:41:08.393590]
+INFO:     172.17.0.1:51808 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [FriendList] [session_id=xqUx287JVEx6CRHF] [2024-04-22 12:41:08.401073]
+INFO:     172.17.0.1:51810 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789659.7787547] [172.17.0.1] [CreateGroup] [session_id=sSJtliFCshJPdN7f] [2024-04-22 12:41:08.408489]
+[ERROR]: Create_group.create_group,erro_mess:(1146, "Table 'graduation_project.{TB_GROUP}' doesn't exist") [2024-04-22 12:41:08.414181]
+INFO:     172.17.0.1:51812 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3826]
+INFO:     Started server process [3827]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789823.325693] [172.17.0.1] [Logon] [] [2024-04-22 12:43:48.839026]
+INFO:     172.17.0.1:57502 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [Logon] [] [2024-04-22 12:43:48.882473]
+INFO:     172.17.0.1:57510 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [Logon] [] [2024-04-22 12:43:48.922300]
+INFO:     172.17.0.1:57516 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [Login] [] [2024-04-22 12:43:48.967984]
+INFO:     172.17.0.1:57522 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [Login] [] [2024-04-22 12:43:48.972378]
+INFO:     172.17.0.1:57530 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [Login] [] [2024-04-22 12:43:48.976662]
+INFO:     172.17.0.1:57538 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [FriendList] [session_id=bwM8kxVIfKGOFzhn] [2024-04-22 12:43:48.980843]
+INFO:     172.17.0.1:57552 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [FriendList] [session_id=UfzioRy5J8k1WMnV] [2024-04-22 12:43:48.988794]
+INFO:     172.17.0.1:57562 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [FriendList] [session_id=WMXbS1rpumxFqiEM] [2024-04-22 12:43:49.000006]
+INFO:     172.17.0.1:57566 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [FriendList] [session_id=U9JRhoo3aKJiixkd] [2024-04-22 12:43:49.007466]
+INFO:     172.17.0.1:57582 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [FriendList] [session_id=3bicGoounjeZN1We] [2024-04-22 12:43:49.021609]
+INFO:     172.17.0.1:57590 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [FriendList] [session_id=cPysYR2ugFRZVA8G] [2024-04-22 12:43:49.029547]
+INFO:     172.17.0.1:57600 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789823.325693] [172.17.0.1] [CreateGroup] [session_id=faXSIsMcpGsNJBuy] [2024-04-22 12:43:49.036605]
+b'1000000001'
+[ERROR]: Create_group.create_group,erro_mess:(1146, "Table 'graduation_project.{TB_GROUP}' doesn't exist") [2024-04-22 12:43:49.042301]
+INFO:     172.17.0.1:57608 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3827]
+INFO:     Started server process [3828]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789875.4792485] [172.17.0.1] [Logon] [] [2024-04-22 12:44:37.628643]
+INFO:     172.17.0.1:36606 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [Logon] [] [2024-04-22 12:44:37.673375]
+INFO:     172.17.0.1:36614 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [Logon] [] [2024-04-22 12:44:37.708996]
+INFO:     172.17.0.1:36626 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [Login] [] [2024-04-22 12:44:37.745969]
+INFO:     172.17.0.1:36630 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [Login] [] [2024-04-22 12:44:37.750673]
+INFO:     172.17.0.1:36632 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [Login] [] [2024-04-22 12:44:37.755288]
+INFO:     172.17.0.1:36644 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [FriendList] [session_id=ipaGlIWNfh5MyUWa] [2024-04-22 12:44:37.759674]
+INFO:     172.17.0.1:36660 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [FriendList] [session_id=tA3UIox1aJvk6jVd] [2024-04-22 12:44:37.766829]
+INFO:     172.17.0.1:36672 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [FriendList] [session_id=a6I00T91uojO3Qq1] [2024-04-22 12:44:37.778640]
+INFO:     172.17.0.1:36688 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [FriendList] [session_id=yRZlVpK6Z6llrEnE] [2024-04-22 12:44:37.785376]
+INFO:     172.17.0.1:36694 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [FriendList] [session_id=8t8e7FtLqFaXdWF0] [2024-04-22 12:44:37.798776]
+INFO:     172.17.0.1:36696 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [FriendList] [session_id=t7ux5UqsXA1k3KFn] [2024-04-22 12:44:37.805669]
+INFO:     172.17.0.1:36708 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789875.4792485] [172.17.0.1] [CreateGroup] [session_id=Vkere7eJcQSYnCuV] [2024-04-22 12:44:37.812833]
+b'1000000002'
+[ERROR]: Create_group.create_group,erro_mess:(1054, "Unknown column 'group_count' in 'field list'") [2024-04-22 12:44:37.818736]
+INFO:     172.17.0.1:36724 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3828]
+INFO:     Started server process [3829]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3829]
+INFO:     Started server process [3830]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3830]
+INFO:     Started server process [3831]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713789997.4937057] [172.17.0.1] [Logon] [] [2024-04-22 12:46:40.821062]
+INFO:     172.17.0.1:55340 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [Logon] [] [2024-04-22 12:46:40.866118]
+INFO:     172.17.0.1:55356 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [Logon] [] [2024-04-22 12:46:40.910863]
+INFO:     172.17.0.1:55370 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [Login] [] [2024-04-22 12:46:40.970185]
+INFO:     172.17.0.1:55380 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [Login] [] [2024-04-22 12:46:40.974506]
+INFO:     172.17.0.1:55382 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [Login] [] [2024-04-22 12:46:40.978616]
+INFO:     172.17.0.1:55394 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [FriendList] [session_id=nV9Z6zIz20VVpTxF] [2024-04-22 12:46:40.982938]
+INFO:     172.17.0.1:55406 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [FriendList] [session_id=MHudJak7jADsZ7XV] [2024-04-22 12:46:40.992002]
+INFO:     172.17.0.1:55412 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [FriendList] [session_id=EGIRmOOCkCka4Vqu] [2024-04-22 12:46:41.009785]
+INFO:     172.17.0.1:55424 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [FriendList] [session_id=Qj6yDofFqfz0PhnB] [2024-04-22 12:46:41.019627]
+INFO:     172.17.0.1:55438 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [FriendList] [session_id=WVPfkXk4fTsDqUUI] [2024-04-22 12:46:41.047072]
+INFO:     172.17.0.1:55452 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [FriendList] [session_id=ipnkeVW7B70inBX1] [2024-04-22 12:46:41.068670]
+INFO:     172.17.0.1:55460 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713789997.4937057] [172.17.0.1] [CreateGroup] [session_id=xddeFoiqoQTaNqb6] [2024-04-22 12:46:41.076153]
+b'1000000003'
+[ERROR]: Create_group.create_group,erro_mess:'CreateGroup' object has no attribute 'ids' [2024-04-22 12:46:41.114405]
+INFO:     172.17.0.1:55476 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3831]
+INFO:     Started server process [3832]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713790060.653376] [172.17.0.1] [Logon] [] [2024-04-22 12:47:43.954422]
+INFO:     172.17.0.1:48504 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [Logon] [] [2024-04-22 12:47:44.011829]
+INFO:     172.17.0.1:48512 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [Logon] [] [2024-04-22 12:47:44.050388]
+INFO:     172.17.0.1:48524 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [Login] [] [2024-04-22 12:47:44.086387]
+INFO:     172.17.0.1:48530 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [Login] [] [2024-04-22 12:47:44.090777]
+INFO:     172.17.0.1:48536 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [Login] [] [2024-04-22 12:47:44.095475]
+INFO:     172.17.0.1:48546 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [FriendList] [session_id=0gRByWIABCMDej9c] [2024-04-22 12:47:44.099780]
+INFO:     172.17.0.1:48558 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [FriendList] [session_id=6livKjb01N0jOYpq] [2024-04-22 12:47:44.107620]
+INFO:     172.17.0.1:48566 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [FriendList] [session_id=yI64A2kLFwOQfd1r] [2024-04-22 12:47:44.118799]
+INFO:     172.17.0.1:48568 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [FriendList] [session_id=oh0eJmB56wYYd37A] [2024-04-22 12:47:44.126843]
+INFO:     172.17.0.1:48570 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [FriendList] [session_id=CqDtSpQPySAUXlJ4] [2024-04-22 12:47:44.142256]
+INFO:     172.17.0.1:48576 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [FriendList] [session_id=9xELuNr40fjWNaeV] [2024-04-22 12:47:44.149920]
+INFO:     172.17.0.1:48588 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790060.653376] [172.17.0.1] [CreateGroup] [session_id=f78Zgv9wRFLarXJ2] [2024-04-22 12:47:44.157737]
+b'1000000004'
+INFO:     172.17.0.1:48594 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'logic/user.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3832]
+INFO:     Started server process [3833]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3833]
+INFO:     Started server process [3834]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3834]
+INFO:     Started server process [3835]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3835]
+INFO:     Started server process [3836]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713790180.6711264] [172.17.0.1] [Login] [] [2024-04-22 12:49:48.636682]
+INFO:     172.17.0.1:35026 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [Login] [] [2024-04-22 12:49:48.643206]
+INFO:     172.17.0.1:35036 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [Login] [] [2024-04-22 12:49:48.647773]
+INFO:     172.17.0.1:35048 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [FriendList] [session_id=AVLB7VwNsyKygDoz] [2024-04-22 12:49:48.652379]
+INFO:     172.17.0.1:35054 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [FriendList] [session_id=BqLC1dPHhUCZOabB] [2024-04-22 12:49:48.657004]
+INFO:     172.17.0.1:35066 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [FriendList] [session_id=JPlhqumeYC65m31g] [2024-04-22 12:49:48.661754]
+INFO:     172.17.0.1:35080 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [FriendList] [session_id=tXssg7iQBe7AHseO] [2024-04-22 12:49:48.666175]
+INFO:     172.17.0.1:35090 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [FriendList] [session_id=7PvbmZDe8HO6onTS] [2024-04-22 12:49:48.670662]
+INFO:     172.17.0.1:35106 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [FriendList] [session_id=fOSq9b1dfj2r0boY] [2024-04-22 12:49:48.675096]
+INFO:     172.17.0.1:35116 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790180.6711264] [172.17.0.1] [CreateGroup] [session_id=tFH0HMFaF9oshFoA] [2024-04-22 12:49:48.679254]
+INFO:     172.17.0.1:35132 - "POST /user HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3836]
+INFO:     Started server process [3839]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3839]
+INFO:     Started server process [3840]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+[INFO]: [1713790273.5581062] [172.17.0.1] [Login] [] [2024-04-22 12:51:24.703931]
+INFO:     172.17.0.1:55678 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790273.5581062] [172.17.0.1] [Login] [] [2024-04-22 12:51:24.710432]
+INFO:     172.17.0.1:55688 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790273.5581062] [172.17.0.1] [Login] [] [2024-04-22 12:51:24.715218]
+INFO:     172.17.0.1:55692 - "POST /user HTTP/1.1" 200 OK
+[INFO]: [1713790273.5581062] [172.17.0.1] [CreateGroup] [session_id=uoEFFGgf1za5HrtV] [2024-04-22 12:51:24.719747]
+INFO:     172.17.0.1:55700 - "POST /user HTTP/1.1" 200 OK

@@ -46,8 +46,9 @@ def id_exist(tb,id):
         sql = f'select id from {tb} where id=%s'
         mysql_cli = pymysql.connect(**MYSQL_CONF)
         cur = mysql_cli.cursor()
-        ret = cur.execute(sql,(id,))
-        if ret == None and len(ret) == 0:
+        cur.execute(sql,(id,))
+        ret = cur.fetchone()
+        if len(ret) == 0:
             return False
         else:
             return True
@@ -66,6 +67,7 @@ def check_username_or_password(data):
     
 create_sql_list = [
     'CREATE TABLE {user_id}_friend (id BIGINT PRIMARY KEY,status VARCHAR(10))',
+    'CREATE TABLE {user_id}_group (group_id BIGINT PRIMARY KEY, identity SMALLINT)',
 ]
 
 # 创建用户时调用
@@ -73,7 +75,34 @@ def create_others(id,cursor):
     for sql in create_sql_list:
         cursor.execute(sql.format(user_id=id))
     return True
-    
+
+# 返回：用户1视角中的关系，用户2视角中的关系
+def get_relationship(user1_id,user2_id):
+    try:
+        sql = 'select status from {}_friend where id = %s'
+        mysql_cli = pymysql.connect(**MYSQL_CONF)
+        cur = mysql_cli.cursor()
+        cur.execute(sql.format(user1_id),(user2_id,))
+        result1 = cur.fetchone()
+        if result1 == None:
+            pass
+        elif len(result1) > 0:
+            result1 = result1[0]
+        else:
+            result1 = None
+        cur.execute(sql.format(user2_id),(user1_id,))
+        result2 = cur.fetchone()
+        if result2 == None:
+            pass
+        elif len(result2) > 0:
+            result2 = result2[0]
+        else:
+            result2 = None        
+        return result1,result2
+    except Exception as e:
+            log.error(e)
+            return None,None
+
 class Logon(object):
     def __init__(self) -> None:
         self.client_redis = redis.Redis(host=REDIS_CONF["host"], port=REDIS_CONF["port"], db=REDIS_CONF["db"])
@@ -317,7 +346,7 @@ class FriendList(object):
             return CODE_OK,{'success' : False , "mess":"parameter incomplete"}
         
         # 判断用户是否存在
-        if not id_exist('tb_user', self.dest_id):
+        if not id_exist(TB_USER, self.dest_id):
             return CODE_OK,{"success" : False,"mess":"Destination User does not existst"}
         
         # 执行添加或删除操作
@@ -426,3 +455,129 @@ class FriendList(object):
             return False
         return True
     
+    
+
+
+# 聊天群创建
+class CreateGroup(object):
+    def __init__(self) -> None:
+        self.mysql_cli = pymysql.connect(**MYSQL_CONF)
+        self.redis_cli = redis.Redis(host=REDIS_CONF["host"], port=REDIS_CONF["port"], db=REDIS_CONF["db"])
+ 
+    
+    def run(self, data):
+        self.data = data
+        try:
+            # 检查信息是否齐全
+            if not self.check_request():
+                return CODE_OK,{'success' : False , "mess":"parameter incomplete", 'group_id' : ''}
+            # 判断需要加群的用户是否存在
+            if not self.check_id():
+                return CODE_OK,{'success' : False , "mess":"User does not existst", 'group_id' : ''}
+            # 获取群id
+            group_id = self.get_group()
+            return CODE_OK,{'success' : True, "mess":"", 'group_id' : group_id}
+        except Exception as e:
+            log.error(e)
+            return CODE_OK,{'success' : False , "mess":"" , 'group_id' : ''}
+    
+    def check_request(self):
+        self.id = self.data.get("id", None)
+        self.dest_id = self.data.get("dest_id", None)
+        if self.id is None or self.dest_id is None:
+            return False
+        return True
+    
+    def check_id(self):
+        if not id_exist(TB_USER,self.id):
+            return False
+        ids = self.dest_id.split(';')
+        for id in ids:
+            if not id_exist(TB_USER,id):
+                return False
+            # 检查目标是否与当前用户为好友关系
+            rela1,rela2 = get_relationship(self.id,id)
+            if rela1 != 'Intention' or rela2 != 'Intention':
+                return False
+            # 否则就是可行的
+        return True
+            
+    
+    def get_group(self):
+        # 检查群是否已经存在
+        # 首先对这些人进行一个排序，按id
+        ids = self.dest_id.split(';')
+        ids.append(self.id)
+        ids.sort()
+        ids = ';'.join(ids)
+        
+        # 如果这些人是否已经有了一个群了，返回旧群号
+        cursor = self.mysql_cli.cursor()
+        sql = f"SELECT group_id FROM `{TB_GROUP}` WHERE user_list=%s"
+        cursor.execute(sql, (ids,))
+        group_id = cursor.fetchone()
+        if group_id is not None and len(group_id) > 0:
+            return group_id[0]
+        
+        # 新建一个群，返回群号
+        group_id = self.create_group(user_list=ids)
+        return group_id
+
+        
+    def create_group(self, user_list):
+        try:
+            # 创建群
+            # 获取群号
+            group_id = None
+            i = 1
+            for c in user_list:
+                if c == ';':
+                    i += 1
+            while group_id is None:
+                if self.redis_cli.set(f"group_id_lock", 1, nx=True, ex=1):
+                    try:
+                        group_id = self.redis_cli.get(f"group_id")
+                        print(group_id)
+                        if group_id == None:
+                            group_id = 1000000000
+                        group_id = int(group_id)
+                        self.redis_cli.set(f"group_id", group_id+1)
+                        self.redis_cli.delete("group_id_lock")
+                    except Exception as e:
+                        self.redis_cli.delete("group_id_lock")
+                        log.error(f"Create_group.create_group,erro_mess:{e}")
+            
+            # 创建该群的档案
+            sql = f'INSERT INTO `{TB_GROUP}` (group_id, user_list, user_count) VALUES (%s,%s,%s)'
+            cursor = self.mysql_cli.cursor()
+            cursor.execute(sql, (group_id, user_list, i))
+            
+            # 建群
+            sql = f'''
+                CREATE TABLE {group_id}_group (
+                    mess_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                    message TEXT,
+                    mess_user_id BIGINT,
+                    timestamp TIMESTAMP
+                )
+                '''
+            cursor.execute(sql)
+            
+            # 为每一个人在群里的身份进行设置，创建者为群主，其他人都是普通用户
+            sql = 'INSERT INTO {id}_group (group_id, identity) VALUES (%s,%s)'
+            cursor.execute(sql.format(id=self.id), (group_id, 2)) # 2级权限是群主
+            
+            id_list = self.dest_id.split(';')
+            for d_id in id_list:
+                cursor.execute(sql.format(id=d_id), (group_id, 0)) # 0级权限是普通用户
+            
+            
+            # 事务通过
+            self.mysql_cli.commit()
+            
+        except Exception as e:
+            # 事务回滚
+            self.mysql_cli.rollback()
+            log.error(f"Create_group.create_group,erro_mess:{e}")
+        
+        return group_id

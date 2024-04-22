@@ -258,5 +258,58 @@ user代表着用户有关的一切操作入口，目前的设计思路是：具�
         修改两个用户的好友列表信息
     5.6 扩展性
         无
+6、聊天系统
+    6.1 简要说明
+        用户可以在一个群组中发送消息，群组的最小单位是至少有两个人，维护一张数据表来确定群组中存在哪些人，表结构如下：
+            CREATE TABLE group_map (
+                group_id BIGINT PRIMARY KEY,
+                user_list TEXT,
+                user_count SMALLINT
+            );
+        对于每一个群组，维护一张表来存储这个群组中的聊天记录，表结构如下：
+            CREATE TABLE {group_id}_group (
+                mess_id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                message TEXT,
+                mess_user_id BIGINT,
+                timestamp TIMESTAMP
+            );
+        创建每一个用户时，给每个用户增加一个所在群的表，这个表中存放群号，以及在群里的身份，身份暂时设置三种：普通用户（0级权限），管理员（1级权限），群主（2级权限）
+        'CREATE TABLE {user_id}_group (group_id BIGINT PRIMARY KEY, identity SMALLINT)'
+    6.2 事件流
+        基本流1：
+            (1) 当一名用户添加另一名用户成功时，创建一个二人群组，新建聊天报文如下
+            {                    
+                "Action" : "CreateGroup",
+                "id" : "1000000002",
+                "dest_id" : "1000000003",
+            }
+            返回的报文如下
+            {
+                'success' : True
+                'mess' : ...,
+                'group_id' : 'xxxxx'
+            }
+            (2) 当用户打开群组时，显示最近的10条消息，用户可以往上翻
+            (3) 当一名用户向另一名用户发送消息时，向数据表中插入一条数据
+        基本流2：
+            (1) 当一名用户主动发起群聊时，创建这些个目标用户的群聊
+            {                    
+                "Action" : "CreateGroup",
+                "id" : "1000000002",
+                "dest_id" : "1000000003;1000000004",
+            }
+            (2) 进入基本流1中的（2）
+        备选流：
+            消息发送失败，提醒用户
+    6.3 特殊要求
+        无
+    6.4 前置条件
+        主动创建群组的用户需要与所有群内用户皆为好友
+    6.5 后置条件
+        超过2人的群，所有会有一个群组列表，会出现在群组列表中
+    6.6 扩展性
+        或许可以有一个申请入群的功能
+7、发送消息
 ```
+2、/manager
 

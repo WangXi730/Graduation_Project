@@ -67,7 +67,7 @@ def check_username_or_password(data):
     
 create_sql_list = [
     'CREATE TABLE {user_id}_friend (id BIGINT PRIMARY KEY,status VARCHAR(10))',
-    'CREATE TABLE {user_id}_group (group_id BIGINT PRIMARY KEY, identity SMALLINT)',
+    'CREATE TABLE {user_id}_groups (group_id BIGINT PRIMARY KEY, identity SMALLINT)',
 ]
 
 # 创建用户时调用
@@ -564,7 +564,7 @@ class CreateGroup(object):
             cursor.execute(sql)
             
             # 为每一个人在群里的身份进行设置，创建者为群主，其他人都是普通用户
-            sql = 'INSERT INTO {id}_group (group_id, identity) VALUES (%s,%s)'
+            sql = 'INSERT INTO {id}_groups (group_id, identity) VALUES (%s,%s)'
             cursor.execute(sql.format(id=self.id), (group_id, 2)) # 2级权限是群主
             
             id_list = self.dest_id.split(';')

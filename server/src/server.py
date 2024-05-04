@@ -1,8 +1,10 @@
-from fastapi import FastAPI, Header, Depends, Request, Response
-from pydantic import BaseModel
+from fastapi import FastAPI, Header, Depends, Request, Response, WebSocket
 import time
-import websockets
 from typing import Dict
+import asyncio
+import json
+import pymysql
+from datetime import datetime
 
 from common.log import log
 from config.config import *
@@ -94,3 +96,97 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
     print(f"sessionid={cookie[11:]}")
     return data
 
+
+
+
+user_link_map = dict()
+insert_sql = "insert into {group_id}_group (message, mess_user_id, timestamp) values (%s, %s, %s)"
+select_sql_group_member = f"select user_list from {TB_GROUP} where group_id = %s"
+select_sql_get_new_mess = "select * from {group_id}_group where mess_id = %s"
+
+select_sql_new20 = "select * from {group_id}_group order by mess_id desc limit 20"
+select_sql_l_r = "select * from {group_id}_group where mess_id between %s and %s"
+
+@app.websocket("/talk/{userid}")
+async def websocket_endpoint(websocket: WebSocket, userid: str):
+    try:
+        await websocket.accept()
+        
+        user_link_map[userid] = websocket
+        
+        # 创建数据库具柄
+        mysql_handle = pymysql.connect(host=MYSQL_CONF['host'], user=MYSQL_CONF['user'], password=MYSQL_CONF['password'], database=MYSQL_CONF['database'])
+        
+        # 获取用户信息
+        
+        while True:
+            message = await websocket.receive_json()
+            if message == 'exit':
+                break
+            else:
+                # 解析message
+                # message = json.loads(message)
+                '''
+                message = {
+                    "Action" : "sendMessage" | "getMessage", # 发送消息和请求获取消息
+                    "group_id" : "xxxxxxx", # 要进行操作的群聊
+                    "sendMessage" : "", # 要发送的消息
+                    "getMessage" : {
+                        "left" : "xxxx",# 最小id，可以为None
+                        "right": "xxxx", # 最大id，可以为None
+                        #如果全为空，默认返回最近的最多20条消息
+                    }
+                }
+                '''
+                action = message['Action']
+                group_id = message['group_id']
+                if action == "heartBeat":
+                    pass
+                elif action == "sendMessage":
+                    message_info = message['sendMessage']
+                    # 向group_id对应的群聊更新最新的数据
+                    cursor = mysql_handle.cursor()
+                    cursor.execute(insert_sql.format(group_id=group_id), (message_info,userid,datetime.now()))
+                    mysql_handle.commit()
+                    # 向所有在线的一个群的人员发送消息
+                    # 要发送的消息
+                    last_insert_id = cursor.lastrowid
+                    cursor.execute(select_sql_get_new_mess.format(group_id=group_id), (last_insert_id,))
+                    mess = cursor.fetchone()
+                    
+                    #要发送的人
+                    cursor.execute(select_sql_group_member, (group_id,))
+                    userlist = cursor.fetchone()[0]
+                    userlist = userlist.split(';')
+                    
+                    for user in userlist:
+                        if user in user_link_map:
+                            await user_link_map[user].send_json(mess)
+                else:
+                    # 获取消息
+                    cursor = mysql_handle.cursor()
+                    left = message['getMessage']['left']
+                    right = message['getMessage']['right']
+                    
+                    if left == None and right == None:
+                        cursor.execute(select_sql_new20.format(group_id=group_id))
+                    elif left == None or right-left >= 20:
+                        cursor.execute(select_sql_l_r.format(group_id=group_id), (max(right-20,0),right,))
+                    else:
+                        cursor.execute(select_sql_l_r.format(group_id=group_id), (left,right,))
+                    
+                    mess = cursor.fetchall()
+                    serialized_mess = []
+                    for i in mess:
+                        for j in i:
+                            if isinstance(j,datetime):
+                                serialized_mess.append(j.strftime("%Y-%m-%d %H:%M:%S"))
+                            else:
+                                serialized_mess.append(j)
+                    await websocket.send_json(serialized_mess)
+                    
+                    
+                
+    except Exception as e:
+        if websocket in user_link_map.values():
+            del user_link_map[websocket]

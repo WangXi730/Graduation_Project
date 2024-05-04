@@ -28,6 +28,7 @@ user代表着用户有关的一切操作入口，目前的设计思路是：具�
                     Response:{
                             "success" : true,
                             "mess" : "login success"
+                            "groups" : []
                     },
                     StatusCode: 0
                 }
@@ -37,6 +38,7 @@ user代表着用户有关的一切操作入口，目前的设计思路是：具�
                     Response:{
                             "success" : false,
                             "mess" : "password error"
+                            "groups" : []
                     }
                     StatusCode: 0
                 }
@@ -45,6 +47,7 @@ user代表着用户有关的一切操作入口，目前的设计思路是：具�
                     Response:{
                             "success" : false,
                             "mess" : "id error"
+                            "groups" : []
                     }
                     StatusCode: 0
                 }
@@ -53,6 +56,7 @@ user代表着用户有关的一切操作入口，目前的设计思路是：具�
                     Response:{
                             "success" : false,
                             "mess" : "get session timeout"
+                            "groups" : []
                     }
                     StatusCode: 0
                 }
@@ -316,7 +320,17 @@ user代表着用户有关的一切操作入口，目前的设计思路是：具�
         用户与用户之间通过协议进行聊天
     7.2 事件流
         基本流：
-            (1) 用户a发送给服务器信息
+            (1) 用户a发送给服务器信息，格式是json，具体如下：
+            message = {
+                "Action" : "sendMessage" | "getMessage", # 发送消息和请求获取消息
+                "group_id" : "xxxxxxx", # 要进行操作的群聊
+                "sendMessage" : "", # 要发送的消息
+                "getMessage" : {
+                    "left" : "xxxx",# 最小id，可以为None
+                    "right": "xxxx", # 最大id，可以为None
+                    #如果全为空，默认返回最近的最多20条消息
+                }
+            }
             (2) 服务器接收到信息，查询当前群组中有哪些成员，查询这些成员中已经登陆的成员，将信息同步给已经登录的成员
             (3) 用户可以主动向服务器索要历史信息，用户需要向服务器提交一个表单，包含left，right两个数据，用户在登录的时候，默认会向服务器发送一个索要信息的请求，服务器会向用户给出的区间（left，right]的消息（最多20条，以right为准），如果right为None，则会传递最新的20条，如果服务器的消息不到20条，那么从left起，发送所有消息给客户端，为了节省消耗（时间和性能），客户端会存储一定的消息，在本地找不到的时候才会向服务器索要消息
         备选流：

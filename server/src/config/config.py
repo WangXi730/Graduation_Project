@@ -30,7 +30,6 @@ TB_GROUP = "group_map" #用于存储数据存放位置，创建表的sql语句�
 '''
 CREATE TABLE group_map (
     group_id BIGINT PRIMARY KEY,
-    group_name CHAR(20),
     user_list TEXT,
     user_count SMALLINT
 );

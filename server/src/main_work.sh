@@ -1,3 +1,7 @@
+pip3 install fastapi
+pip3 install uvicorn
+pip3 install websockets
+
 current_dir=$(dirname $0)
 current_dir=$(cd "${current_dir}";pwd)
 

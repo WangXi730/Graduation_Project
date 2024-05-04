@@ -103,6 +103,20 @@ def get_relationship(user1_id,user2_id):
             log.error(e)
             return None,None
 
+def get_groups(user_id):
+    sql = f'select * from {user_id}_groups'
+    mysql_cli = pymysql.connect(**MYSQL_CONF)
+    cur = mysql_cli.cursor()
+    cur.execute(sql)  # 执行查询
+    result = []
+    columns = [column[0] for column in cur.description]  # 获取字段名
+    for row in cur.fetchall():
+        row_dict = dict(zip(columns, row))  # 将每一行数据转换为字典
+        result.append(row_dict)  # 添加到结果列表中
+    cur.close()
+    mysql_cli.close()
+    return result
+
 class Logon(object):
     def __init__(self) -> None:
         self.client_redis = redis.Redis(host=REDIS_CONF["host"], port=REDIS_CONF["port"], db=REDIS_CONF["db"])
@@ -171,25 +185,30 @@ class Login(object):
         password = data["password"]
         #检查id和密码是否合法
         if not check_username_or_password(password):
-            return CODE_OK, {'success': False, "mess" : "password format error"}
+            return CODE_OK, {'success': False, "mess" : "password format error", "groups":[]}
         try:
             id = int(data["id"])
         except:
-            return CODE_OK, {'success': False, "mess" : "id error"}
+            return CODE_OK, {'success': False, "mess" : "id error", "groups":[]}
         try:
             max_id = self.client_redis.get(f"id")
             max_id = int(max_id)
             if id > max_id:
-                return CODE_OK, {'success': False, "mess" : "id error"}
+                return CODE_OK, {'success': False, "mess" : "id error", "groups":[]}
         except:
             pass
         #检查id和密码是否匹配
         id_password = self.get_password(id)
         if id_password == None:
-            return CODE_OK, {'success': False, "mess" : "id error"}
+            return CODE_OK, {'success': False, "mess" : "id error", "groups":[]}
         elif id_password != password:
-            return CODE_OK, {'success': False, "mess" : "password error"}
-        return CODE_OK, {'success': True, "mess" : "login success"}
+            return CODE_OK, {'success': False, "mess" : "password error", "groups":[]}
+        #获取用户所在群组
+        try:
+            groups = get_groups(id)
+        except:
+            groups = []
+        return CODE_OK, {'success': True, "mess" : "login success", "groups":groups}
         
     def get_password(self,id):
         try:
@@ -559,7 +578,7 @@ class CreateGroup(object):
                     message TEXT,
                     mess_user_id BIGINT,
                     timestamp TIMESTAMP
-                )
+                )DEFAULT CHARSET=utf8mb4
                 '''
             cursor.execute(sql)
             

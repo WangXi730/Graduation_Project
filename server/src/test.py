@@ -1,6 +1,7 @@
 import requests
 import websockets
 import json
+import asyncio
 
 def test_logon():
     url = "http://172.17.0.2:80/user"
@@ -148,11 +149,25 @@ async def test_send_mess(id,group_id,mess):
     message['sendMessage'] = mess
     await websocket.send(json.dumps(message))
 
+# 心跳监听机制
 async def test_recv_mess(id):
-    #获取句柄
+    # 获取句柄
     websocket = id_session_map[id]
-    #接收消息
+    # 心跳信息
+    message = {
+        "Action" : 'heartBeat', # 发送消息和请求获取消息
+        "group_id" : "xxxxxxx", # 要进行操作的群聊
+        "sendMessage" : "", # 要发送的消息
+        "getMessage" : {
+            "left" : "xxxx",# 最小id，可以为None
+            "right": "xxxx", # 最大id，可以为None
+            #如果全为空，默认返回最近的最多20条消息
+        }
+    }
+    # 接收消息
     while True:
+        await asyncio.sleep(1)
+        await websocket.send(json.dumps(message))
         result = await websocket.recv()
         print(f"{id}:\n" + result)
         print(type(result))
@@ -185,10 +200,7 @@ async def main_of_create_group(sessionid,u11,u12,u13):
     # u13创建一个三人的群聊
     sessionid[u13] = test_create_group(sessionid[u13],u13,[u12,u11])
 
-async def main_of_send_message(sessionid,u11,u12,u13,group_id,mess):
-    sessionid[u11] = await test_login(u11)
-    sessionid[u12] = await test_login(u12)
-    sessionid[u13] = await test_login(u13)
+async def main_of_send_message(u11,u12,u13,group_id,mess):
     
     # 三个人进入监听状态
     listen_task1 = asyncio.create_task(test_recv_mess(u11))
@@ -239,9 +251,8 @@ async def main():
     # await main_of_create_group(sessionid,u11,u12,u13)
     
     # 发消息
-    await main_of_send_message(sessionid,u11,u12,u13,group_id,'你好')
+    await main_of_send_message(u11,u12,u13,group_id,'你好')
 
 
 if __name__ == '__main__':
-    import asyncio
     asyncio.run(main())

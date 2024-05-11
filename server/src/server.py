@@ -89,17 +89,9 @@ async def download_request():
     pass
 
 
-@app.post("/test")
-async def user_request(request: Request, response: Response, data : Dict, cookie: str = Header(None), request_id: str = str(time.time())):
-    print(f"data = {data}")
-    print(f"cookie = {cookie},cookie_type = {type(cookie)}")
-    print(f"sessionid={cookie[11:]}")
-    return data
-
-
-
-
 user_link_map = dict()
+user_mess_buffer = dict()
+
 insert_sql = "insert into {group_id}_group (message, mess_user_id, timestamp) values (%s, %s, %s)"
 select_sql_group_member = f"select user_list from {TB_GROUP} where group_id = %s"
 select_sql_get_new_mess = "select * from {group_id}_group where mess_id = %s"
@@ -128,7 +120,7 @@ async def websocket_endpoint(websocket: WebSocket, userid: str):
                 # message = json.loads(message)
                 '''
                 message = {
-                    "Action" : "sendMessage" | "getMessage", # 发送消息和请求获取消息
+                    "Action" : "sendMessage" | "getMessage" |'heartBeat', # 发送消息和请求获取消息
                     "group_id" : "xxxxxxx", # 要进行操作的群聊
                     "sendMessage" : "", # 要发送的消息
                     "getMessage" : {
@@ -141,7 +133,12 @@ async def websocket_endpoint(websocket: WebSocket, userid: str):
                 action = message['Action']
                 group_id = message['group_id']
                 if action == "heartBeat":
-                    pass
+                    if userid not in user_mess_buffer or not isinstance(user_mess_buffer[userid],list) or len(user_mess_buffer[userid]) == 0:
+                        await websocket.send_json("heartBeat")
+                    else:
+                        await websocket.send_json(user_mess_buffer[userid])
+                        # 清空消息缓冲区
+                        user_mess_buffer[userid] = list()
                 elif action == "sendMessage":
                     message_info = message['sendMessage']
                     # 向group_id对应的群聊更新最新的数据
@@ -153,15 +150,28 @@ async def websocket_endpoint(websocket: WebSocket, userid: str):
                     last_insert_id = cursor.lastrowid
                     cursor.execute(select_sql_get_new_mess.format(group_id=group_id), (last_insert_id,))
                     mess = cursor.fetchone()
-                    
+                    serialized_mess = []
+                    for i in mess:
+                        if isinstance(i,datetime):
+                            serialized_mess.append(i.strftime("%Y-%m-%d %H:%M:%S"))
+                        else:
+                            serialized_mess.append(i)
+
                     #要发送的人
                     cursor.execute(select_sql_group_member, (group_id,))
                     userlist = cursor.fetchone()[0]
                     userlist = userlist.split(';')
                     
+                    # for user in userlist:
+                    #     if user in user_link_map:
+                    #         await user_link_map[user].send_json(mess)
+                    # 放入缓冲区，等待心跳
                     for user in userlist:
                         if user in user_link_map:
-                            await user_link_map[user].send_json(mess)
+                            if user not in user_mess_buffer or not isinstance(user_mess_buffer[user],list):
+                                user_mess_buffer[user] = list()
+                            user_mess_buffer[user].append(serialized_mess)
+                    
                 else:
                     # 获取消息
                     cursor = mysql_handle.cursor()
@@ -178,11 +188,13 @@ async def websocket_endpoint(websocket: WebSocket, userid: str):
                     mess = cursor.fetchall()
                     serialized_mess = []
                     for i in mess:
+                        cell_serialized = []
                         for j in i:
                             if isinstance(j,datetime):
-                                serialized_mess.append(j.strftime("%Y-%m-%d %H:%M:%S"))
+                                cell_serialized.append(j.strftime("%Y-%m-%d %H:%M:%S"))
                             else:
-                                serialized_mess.append(j)
+                                cell_serialized.append(j)
+                        serialized_mess.append(cell_serialized)
                     await websocket.send_json(serialized_mess)
                     
                     

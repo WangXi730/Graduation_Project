@@ -1,0 +1,14 @@
+FROM python:3.11
+
+WORKDIR /server/
+
+COPY . /server
+
+RUN pip3 install fastapi
+RUN pip3 install uvicorn
+RUN pip3 install websockets
+RUN pip3 install pymysql
+RUN pip3 install redis
+
+
+CMD ["bash", "main_work.sh"]

@@ -3,8 +3,19 @@ import websockets
 import json
 import asyncio
 
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--ip', help='IP address')
+parser.add_argument('--port', help='Port number')
+args = parser.parse_args()
+
+ip = args.ip
+port = args.port
+
+
 def test_logon():
-    url = "http://172.17.0.2:80/user"
+    url = f"http://{ip}:{port}/user"
     header = {
         "cookie":""
     }
@@ -22,7 +33,7 @@ id_session_map = dict()
 async def test_login(id):
     # 登陆操作分为两部分
     # 1、注册一个session
-    url = "http://172.17.0.2:80/user"
+    url = f"http://{ip}:{port}/user"
     header = {
         "cookie":""
     }
@@ -37,9 +48,9 @@ async def test_login(id):
     print(type(response.cookies.get('session_id')))
     
     # # 2、连接到双向通信中
-    # websocket = await websockets.connect('http://172.17.0.2:')
+    # websocket = await websockets.connect('http://{ip}:')
     groups = response.json()['Response']['groups']
-    url = f"ws://172.17.0.2:80/talk/{id}"
+    url = f"ws://{ip}:{port}/talk/{id}"
     this_connect = await websockets.connect(url)
     message = {
         "Action" : "getMessage", # 发送消息和请求获取消息
@@ -61,7 +72,7 @@ async def test_login(id):
     return response.cookies.get('session_id')
 
 def test_get_mess(session_id):
-    url = "http://172.17.0.2:80/user"
+    url = f"http://{ip}:{port}/user"
     cookies = {"session_id" : session_id}
     data = {
         "Action" : "GetMessage",
@@ -74,7 +85,7 @@ def test_get_mess(session_id):
 
 
 def test_update_info(session_id):
-    url = "http://172.17.0.2:80/user"
+    url = f"http://{ip}:{port}/user"
     cookies = {"session_id" : session_id}
     data = {
         "Action" : "Update",
@@ -105,7 +116,7 @@ create_sql_list = [
 
 
 def test_friend(session_id,id,dest_id,action=0):
-    url = "http://172.17.0.2:80/user"
+    url = f"http://{ip}:{port}/user"
     cookies = {"session_id" : session_id}
     data = {
         "Action" : "FriendList",
@@ -119,7 +130,7 @@ def test_friend(session_id,id,dest_id,action=0):
     return response.cookies.get('session_id')
 
 def test_create_group(session_id,id,dest_id):
-    url = "http://172.17.0.2:80/user"
+    url = f"http://{ip}:{port}/user"
     cookies = {"session_id" : session_id}
     data = {                    
         "Action" : "CreateGroup",

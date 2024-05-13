@@ -1,0 +1,8 @@
+FROM mysql:5.7.30
+
+WORKDIR /docker-entrypoint-initdb.d
+ENV MYSQL_ROOT_PASSWORD=Xy3@9#pZ$7!
+
+ADD ./mysql_conf.sql /docker-entrypoint-initdb.d/
+ADD ./graduation_project_conf.sql /docker-entrypoint-initdb.d/
+

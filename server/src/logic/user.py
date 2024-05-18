@@ -600,3 +600,10 @@ class CreateGroup(object):
             log.error(f"Create_group.create_group,erro_mess:{e}")
         
         return group_id
+    
+    
+class GetGame(object):
+    def __init__(self):
+        pass
+    def func(self):
+        pass

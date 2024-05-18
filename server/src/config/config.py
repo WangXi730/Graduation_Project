@@ -41,3 +41,11 @@ REDIS_CONF = {
     "db": 0
 }
 
+import os 
+
+if 'MYSQL_HOST' in os.environ:
+  MYSQL_CONF['host'] = os.environ['MYSQL_HOST']
+if 'MYSQL_PASSWORD' in os.environ:
+  MYSQL_CONF["password"] = os.environ['MYSQL_PASSWORD']
+if 'REDIS_HOST' in os.environ:
+  REDIS_CONF['host'] = os.environ['REDIS_HOST']

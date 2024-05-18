@@ -27,8 +27,8 @@ actions = {
     "GetMessage": (user.GetMessage,"获取消息","ekkowwang") ,
     "FriendList": (user.FriendList,"好友列表","ekkowwang"),
     "CreateGroup" : (user.CreateGroup, "创建群聊","ekkowwang"),
+    'GetGame' : (user.GetGame,"获取游戏信息","ekkowwang"),
 }
-
 
 @app.post("/user")
 async def user_request(request: Request, response: Response, data : Dict, cookie: str = Header(None), request_id: str = str(time.time())):
@@ -71,7 +71,7 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
         ret = {"StatusCode":code, "Response":result}
         
     except Exception as e:
-        log.error(f"[{request_id}] [{request_ip}] [{action}] [{cookie}] [{e}]")
+        log.error(f"[{request_id}] [{request_ip}] [user] [{action}] [{cookie}] [{e}]")
         ret = {"StatusCode":CODE_ERROR, "Response":str(e)}
     
     if session_id != None:
@@ -83,12 +83,7 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
 @app.post("/manager")
 async def manager_request():
     pass
-
-@app.get("/download")
-async def download_request():
-    pass
-
-
+        
 user_link_map = dict()
 user_mess_buffer = dict()
 

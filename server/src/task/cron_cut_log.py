@@ -2,10 +2,18 @@ import shutil
 import datetime
 import sys
 import os
+import pytz
+from apscheduler.schedulers.background import BlockingScheduler
+import time
+
+
+scheduler = BlockingScheduler(timezone=pytz.timezone("Asia/Shanghai"))
 
 # 切割日志
+@scheduler.scheduled_job("cron", hour=1, minute=0, second=0)
 def split_log_file():
-    cur_pro_dir = sys.argv[0]
+    size = len('task/cron_cut_log.py')
+    cur_pro_dir = sys.argv[0][:-size]
     
     current_time = datetime.datetime.now()
     log_file = f"/{cur_pro_dir}/logs/uvicorn.log"
@@ -18,8 +26,10 @@ def split_log_file():
     open(log_file, 'a').close()
 
 # 清理超过7天的日志文件
+@scheduler.scheduled_job("cron", hour=2, minute=0, second=0)
 def clear_log_file():
-    cur_pro_dir = sys.argv[0]
+    size = len('task/cron_cut_log.py')
+    cur_pro_dir = sys.argv[0][:-size]
     log_dir = f"/{cur_pro_dir}/logs/"
     log_file_list = os.listdir(log_dir)
     for log_file in log_file_list:
@@ -31,6 +41,4 @@ def clear_log_file():
 
 
 # 调用函数执行日志切割
-if __name__ == '__main__':
-    split_log_file()
-    clear_log_file()
+scheduler.start()

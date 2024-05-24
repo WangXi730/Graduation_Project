@@ -103,7 +103,8 @@ class MainWindow(QMainWindow):
         central_widget.setLayout(layout)
         self.setCentralWidget(central_widget)
 
-app = QApplication([])
-window = MainWindow()
-window.show()
-app.exec()
+if __name__ == '__main__':
+    app = QApplication([])
+    window = MainWindow()
+    window.show()
+    app.exec()

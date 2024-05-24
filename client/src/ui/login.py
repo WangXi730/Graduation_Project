@@ -1,6 +1,7 @@
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import QApplication,QDialog, QWidget, QVBoxLayout, QFormLayout, QLabel, QLineEdit, QPushButton
-
+from friends import MainWindow
+from game_list import GameList
 class Login(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -27,7 +28,7 @@ class Login(QDialog):
         layout.addLayout(form_layout)
 
         # 创建注册按钮
-        logon_button = QPushButton("注册")
+        logon_button = QPushButton("登录")
         logon_button.clicked.connect(self.show_message)
         layout.addWidget(logon_button)
 
@@ -43,8 +44,33 @@ class Login(QDialog):
         password = self.password_textbox.text()
         message = f"用户名：{username}，密码：{password}"
         self.message_label.setText(message)
+        self.choose = Choose()
+        self.choose.show()
 
 
+class Choose(QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.game_list_button = QPushButton("游戏列表")
+        self.game_list_button.clicked.connect(self.open_game_list)
+
+        self.friend_list_button = QPushButton("好友列表")
+        self.friend_list_button.clicked.connect(self.open_friend_list)
+
+        layout = QVBoxLayout()
+        layout.addWidget(self.game_list_button)
+        layout.addWidget(self.friend_list_button)
+
+        self.setLayout(layout)
+
+    def open_game_list(self):
+        self.game_list = GameList()
+        self.game_list.show()
+
+    def open_friend_list(self):
+        self.friend_list = MainWindow()
+        self.friend_list.show()
 
 if __name__ == "__main__":
     app = QApplication([])

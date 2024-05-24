@@ -2,15 +2,17 @@ from PySide6.QtWidgets import QApplication,QDialog, QMainWindow, QTextEdit, QLin
 from PySide6.QtCore import Qt, Signal, QTime, QTimer
 
 
-class Talk(QMainWindow):
+class Talk(QMainWindow,QDialog):
     scroll_signal=Signal()
-    def __init__(self, parent=None):
+    def __init__(self, group_name, parent=None):
         super().__init__(parent)
+        self.group_name = group_name
+        self.parent = parent
         self.initUI()
         self.i = 1
 
     def initUI(self):
-        self.setWindowTitle("文本框示例")
+        self.setWindowTitle(self.group_name)
         self.setMinimumSize(400, 300)
 
         # 创建小文本框和大文本框
@@ -67,6 +69,6 @@ class Talk(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = Talk()
+    window = Talk(group_name='1000000006(1000000074;1000000075;1000000076)')# 括号外的是群号，括号内的是聊天成员的id
     window.show()
     app.exec()

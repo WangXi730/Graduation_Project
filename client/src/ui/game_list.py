@@ -6,7 +6,7 @@ class GameList(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle("页面示例")
+        self.setWindowTitle("game list")
         self.setMinimumSize(400, 300)
 
         # 创建上半部分的部件

@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QFormLayout, QLabel, QLineEdit, QPushButton
-from logon import Logon
-from login import Login
+from ui.logon import Logon
+from ui.login import Login
 
 class Begin(QWidget):
     def __init__(self):

@@ -4,14 +4,14 @@ WORKDIR /server/
 
 COPY . /server
 
-RUN pip3 install fastapi
-RUN pip3 install uvicorn
+RUN pip3 --default-timeout=100000 install fastapi 
+RUN pip3 install uvicorn 
 RUN pip3 install websockets
-RUN pip3 install pymysql
+RUN pip3 install pymysql 
 RUN pip3 install redis
-RUN pip install pytz
-RUN pip install APScheduler
+RUN pip install pytz 
+RUN pip install APScheduler 
 
-ENV MYSQL_PASSWORD=Xy3@9#pZ$7!
+ENV MYSQL_PASSWORD='Xy3@9#pZ$7!'
 
 CMD ["bash", "main_work.sh"]

@@ -1,0 +1,11 @@
+FROM python:3.11
+
+WORKDIR /server/
+
+COPY . /server
+
+RUN pip3 --default-timeout=100000 install fastapi 
+RUN pip3 install uvicorn 
+
+
+CMD ["python3", "download_test_server.py"]

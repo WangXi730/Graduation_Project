@@ -30,7 +30,7 @@ def test_logon():
     return response['Response']['id']
 
 id_session_map = dict()
-async def test_login(id):
+async def test_login(id,password):
     # 登陆操作分为两部分
     # 1、注册一个session
     url = f"http://{ip}:{port}/user"
@@ -40,7 +40,7 @@ async def test_login(id):
     data = {
         "Action" : "Login",
         "id" : id,
-        "password" : "111111"
+        "password" : password
     }
     response = requests.post(url=url, headers=header, json=data)
     print(response.text)
@@ -232,7 +232,7 @@ async def main():
     # print(create_sql_list[0].format(user_id='11111'))
     # test_logon()
     
-    # # 注册
+    # 注册
     # u11 = test_logon()
     # u12 = test_logon()
     # u13 = test_logon()
@@ -242,10 +242,10 @@ async def main():
     
     
     # 登陆
-    u11 = '1000000074'
-    u12 = '1000000075'
-    u13 = '1000000076'
-    group_id = "1000000006"
+    u11 = '1000000000'
+    u12 = '1000000001'
+    u13 = '1000000002'
+    group_id = "1000000000"
     
     
     sessionid = {
@@ -254,9 +254,9 @@ async def main():
         u13 : None
     }
     
-    sessionid[u11] = await test_login(u11)
-    sessionid[u12] = await test_login(u12)
-    sessionid[u13] = await test_login(u13)
+    sessionid[u11] = await test_login(u11,'123456')
+    sessionid[u12] = await test_login(u12,'122321')
+    sessionid[u13] = await test_login(u13,'122321')
 
     #创建群聊
     # await main_of_create_group(sessionid,u11,u12,u13)

@@ -104,7 +104,7 @@ def get_relationship(user1_id,user2_id):
             return None,None
 
 def get_groups(user_id):
-    sql = f'select * from {user_id}_groups'
+    sql = f'SELECT g.group_id, g.identity, gm.user_list, gm.user_count FROM {user_id}_groups g INNER JOIN group_map gm ON g.group_id = gm.group_id'
     mysql_cli = pymysql.connect(**MYSQL_CONF)
     cur = mysql_cli.cursor()
     cur.execute(sql)  # 执行查询
@@ -114,6 +114,7 @@ def get_groups(user_id):
         row_dict = dict(zip(columns, row))  # 将每一行数据转换为字典
         result.append(row_dict)  # 添加到结果列表中
     cur.close()
+    
     mysql_cli.close()
     return result
 
@@ -147,19 +148,25 @@ class Logon(object):
     def get_id(self):
         if self.client_redis.set(f"id_lock", 1, nx=True, ex=1):
             try:
-                id = self.client_redis.get(f"id")
-                if id == None:
-                    id = 1000000000
-                id = int(id)
-                self.client_redis.set(f"id", id+1)
+                sql = 'select bigint_column from db_buffer where id=1'
+                cursor = self.client_mysql.cursor()
+                cursor.execute(sql)
+                result = cursor.fetchone()
+                id = result[0]
+                sql = f'update db_buffer set bigint_column=bigint_column+1 where id=1'
+                cursor = self.client_mysql.cursor()
+                cursor.execute(sql)
+                self.client_mysql.commit()
                 self.client_redis.delete("id_lock")
                 return id
             except Exception as e:
+                self.client_mysql.rollback()
                 self.client_redis.delete("id_lock")
                 log.error(f"Logon.get_id,erro_mess:{e}")
                 return None
         else:
             return None
+
 
     def create_user(self, id, username, password):
         try:
@@ -190,13 +197,7 @@ class Login(object):
             id = int(data["id"])
         except:
             return CODE_OK, {'success': False, "mess" : "id error", "groups":[]}
-        try:
-            max_id = self.client_redis.get(f"id")
-            max_id = int(max_id)
-            if id > max_id:
-                return CODE_OK, {'success': False, "mess" : "id error", "groups":[]}
-        except:
-            pass
+
         #检查id和密码是否匹配
         id_password = self.get_password(id)
         if id_password == None:
@@ -406,8 +407,6 @@ class FriendList(object):
                     pass
                 else:
                     # 对方还没有意向，新增一条记录录
-                    sql = f"INSERT INTO `{self.id}_friend` VALUES({self.dest_id}, 'Intention')"
-                    cursor.execute(sql)
                     # 同时，应该向对方告知这个消息
                     # 但这有个前提：对方没有将自己加入黑名单
                     sql = f'SELECT status FROM `{self.dest_id}_friend` WHERE id = {self.id}'
@@ -416,9 +415,12 @@ class FriendList(object):
                     if ret != None and len(ret) > 0:
                         ret = ret[0]
                     if ret == 'Black':
-                        # 被拉入黑名单，不予通知对方
+                        # 被拉入黑名单，不允许关注对方，不予通知对方
                         pass
                     else:
+                        # 新增记录
+                        sql = f"INSERT INTO `{self.id}_friend` VALUES({self.dest_id}, 'Intention')"
+                        cursor.execute(sql)
                         # 通知对方
                         sql = f"INSERT INTO `{self.dest_id}_friend` VALUES({self.id}, 'Request')"
                         cursor.execute(sql)
@@ -446,9 +448,18 @@ class FriendList(object):
                     # 对方在自己的列表里
                     if ret[0] != 'Black':
                         log.info(ret[0])
-                        # 修改
+                        # 修改自己的列表
                         sql = f"UPDATE `{self.id}_friend` SET status = 'Black' WHERE id = {self.dest_id}"
                         cursor.execute(sql)
+                        # 如果自己在对方的列表中不是黑名单状态，应当删除对方列表中自己的数据
+                        sql = f"SELECT status FROM `{self.dest_id}_friend` WHERE id = {self.id}"
+                        cursor.execute(sql)
+                        ret = cursor.fetchone()
+                        if ret != None and len(ret) > 0:
+                            ret = ret[0]
+                        if ret != 'Black':
+                            sql = f"DELETE FROM `{self.dest_id}_friend` WHERE id = {self.id}"
+                            cursor.execute(sql)
                     else:
                         # 已是黑名单，无需再处理
                         pass
@@ -508,10 +519,17 @@ class CreateGroup(object):
         return True
     
     def check_id(self):
+        print(self.id)
+        print(1)
         if not id_exist(TB_USER,self.id):
             return False
+        print(2)
         ids = self.dest_id.split(';')
+        print(ids)
+        print(3)
         for id in ids:
+            print(4)
+            print(id)
             if not id_exist(TB_USER,id):
                 return False
             # 检查目标是否与当前用户为好友关系
@@ -519,6 +537,7 @@ class CreateGroup(object):
             if rela1 != 'Intention' or rela2 != 'Intention':
                 return False
             # 否则就是可行的
+        print(5)
         return True
             
     
@@ -555,14 +574,21 @@ class CreateGroup(object):
             while group_id is None:
                 if self.redis_cli.set(f"group_id_lock", 1, nx=True, ex=1):
                     try:
-                        group_id = self.redis_cli.get(f"group_id")
+                        # group_id = self.redis_cli.get(f"group_id")
+                        cursor = self.mysql_cli.cursor()
+                        sql = 'select bigint_column from db_buffer where id = 2'
+                        cursor.execute(sql)
+                        group_id = cursor.fetchone()[0]
                         print(group_id)
-                        if group_id == None:
-                            group_id = 1000000000
-                        group_id = int(group_id)
-                        self.redis_cli.set(f"group_id", group_id+1)
+
+                        sql = f'update db_buffer set bigint_column=bigint_column+1 where id=2'
+                        cursor = self.mysql_cli.cursor()
+                        cursor.execute(sql)
+
+                        self.mysql_cli.commit()
                         self.redis_cli.delete("group_id_lock")
                     except Exception as e:
+                        self.mysql_cli.rollback()
                         self.redis_cli.delete("group_id_lock")
                         log.error(f"Create_group.create_group,erro_mess:{e}")
             
@@ -603,7 +629,38 @@ class CreateGroup(object):
     
     
 class GetGame(object):
+    def __init__(self) -> None:
+        self.mysql_cli = pymysql.connect(**MYSQL_CONF)
+    def run(self,data):
+        keyword = data.get("keyword")
+        keyword = f'%{keyword}%'
+        sql = 'select * from game_list where name like %s'
+        response = {}
+        try:
+            cursor = self.mysql_cli.cursor()
+            cursor.execute(sql,(keyword,))
+            result = cursor.fetchall()
+            games = [list(i) for i in result]
+            response['games'] = games
+        except Exception as e:
+            log.error(f'Get game error : {e}')
+        return CODE_OK,response
+
+
+class GetFriendList(object):
     def __init__(self):
-        pass
-    def func(self):
-        pass
+        self.mysql_cli = pymysql.connect(**MYSQL_CONF)
+    
+    def run(self,data):
+        id = data.get("id")
+        sql = f'SELECT f.id, f.status, u.username FROM {id}_friend f JOIN tb_user u ON f.id = u.id'
+        response = {}
+        try:
+            cursor = self.mysql_cli.cursor()
+            cursor.execute(sql)
+            friends = cursor.fetchall()
+            response['userlist'] = friends
+        except Exception as e:
+            log.error(f'Get friends error : {e}')
+        return CODE_OK,response
+

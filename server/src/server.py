@@ -1,4 +1,5 @@
-from fastapi import FastAPI, Header, Depends, Request, Response, WebSocket
+from fastapi import FastAPI, Header, Depends, Request, Response, WebSocket, File, HTTPException,UploadFile
+
 import time
 from typing import Dict
 import asyncio
@@ -9,7 +10,7 @@ from datetime import datetime
 from common.log import log
 from config.config import *
 
-from logic import user
+from logic import user,manager
 
 app = FastAPI()
 
@@ -20,14 +21,18 @@ app = FastAPI()
 # 3、客户端下载：
 
 # action : (function, desc, owner)
-actions = {
+user_actions = {
     "Login": (user.Login ,"用户登录","ekkowwang"),
     "Logon": (user.Logon,"用户注册","ekkowwang") ,
     "Update": (user.Update,"用户提交个人数据","ekkowwang") ,
-    "GetMessage": (user.GetMessage,"获取消息","ekkowwang") ,
-    "FriendList": (user.FriendList,"好友列表","ekkowwang"),
+    "GetMessage": (user.GetMessage,"获取信息","ekkowwang") ,
+    "FriendList": (user.FriendList,"操作好友列表","ekkowwang"),
+    "GetFriendList" : (user.GetFriendList,'获取好友的信息','ekkowwang'),
     "CreateGroup" : (user.CreateGroup, "创建群聊","ekkowwang"),
     'GetGame' : (user.GetGame,"获取游戏信息","ekkowwang"),
+}
+manager_actions = {
+    'Update' : (manager.Update, "上传应用", "ekkowwang"),
 }
 
 @app.post("/user")
@@ -45,7 +50,7 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
         action = data.get("Action","")
         log.info(f"[{request_id}] [{request_ip}] [{action}] [{cookie}]")
         # 执行动作
-        if action in actions:
+        if action in user_actions:
             if action == "Login":
                 #首次获取session_id
                 session_id = user.create_session(data.get("id"))
@@ -64,7 +69,7 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
                     return {"StatusCode":CODE_ERROR, "Response":"get session timeout"}
                 elif  session_id == "error":
                     return {"StatusCode":CODE_ERROR, "Response":"get session error, place login age!"}
-            func, desc, owner = actions.get(action)
+            func, desc, owner = user_actions.get(action)
             code, result = func().run(data)
             if action == 'Login' and result.get('success') == False:
                 session_id = None
@@ -81,8 +86,38 @@ async def user_request(request: Request, response: Response, data : Dict, cookie
     
 
 @app.post("/manager")
-async def manager_request():
-    pass
+async def manager_request(request: Request, response: Response, data : Dict, cookie: str = Header(None), request_id: str = str(time.time())):
+    action = ""
+    request_ip = ""
+    code = CODE_OK
+    result = {}
+    ret = {}
+    session_id = None
+    
+    try:
+        # 获取信息
+        request_ip = request.client.host
+        action = data.get("Action","")
+        log.info(f"[{request_id}] [{request_ip}] [{action}] [{cookie}]")
+        # 执行动作
+        if action in manager_actions:
+            if action == "Login":
+                #验证身份信息
+                pass
+            else:
+                #验证登录信息
+                pass
+            func, desc, owner = manager_actions.get(action)
+            code, result = func().run(data)
+        ret = {"StatusCode":code, "Response":result}
+        
+    except Exception as e:
+        log.error(f"[{request_id}] [{request_ip}] [manager] [{action}] [{cookie}] [{e}]")
+        ret = {"StatusCode":CODE_ERROR, "Response":str(e)}
+    
+    return ret
+    
+
         
 user_link_map = dict()
 user_mess_buffer = dict()
@@ -128,12 +163,15 @@ async def websocket_endpoint(websocket: WebSocket, userid: str):
                 action = message['Action']
                 group_id = message['group_id']
                 if action == "heartBeat":
-                    if userid not in user_mess_buffer or not isinstance(user_mess_buffer[userid],list) or len(user_mess_buffer[userid]) == 0:
+                    if userid not in user_mess_buffer or not isinstance(user_mess_buffer[userid],dict) or not user_mess_buffer[userid] or group_id not in user_mess_buffer[userid] or not isinstance(user_mess_buffer[userid][group_id],list) or len(user_mess_buffer[userid][group_id]) == 0:
                         await websocket.send_json("heartBeat")
                     else:
-                        await websocket.send_json(user_mess_buffer[userid])
+                        send_mess = {}
+                        send_mess["mess"] = user_mess_buffer[userid][group_id]
+                        send_mess["group_id"] = group_id
+                        await websocket.send_json(send_mess)
                         # 清空消息缓冲区
-                        user_mess_buffer[userid] = list()
+                        user_mess_buffer[userid][group_id] = list()
                 elif action == "sendMessage":
                     message_info = message['sendMessage']
                     # 向group_id对应的群聊更新最新的数据
@@ -163,11 +201,13 @@ async def websocket_endpoint(websocket: WebSocket, userid: str):
                     # 放入缓冲区，等待心跳
                     for user in userlist:
                         if user in user_link_map:
-                            if user not in user_mess_buffer or not isinstance(user_mess_buffer[user],list):
-                                user_mess_buffer[user] = list()
-                            user_mess_buffer[user].append(serialized_mess)
+                            if user not in user_mess_buffer or not isinstance(user_mess_buffer[user],dict):
+                                user_mess_buffer[user] = dict()
+                            if group_id not in user_mess_buffer[user] or not isinstance(user_mess_buffer[user][group_id],list):
+                                user_mess_buffer[user][group_id] = list()
+                            user_mess_buffer[user][group_id].append(serialized_mess)
                     
-                else:
+                elif action == "getMessage":
                     # 获取消息
                     cursor = mysql_handle.cursor()
                     left = message['getMessage']['left']
@@ -190,8 +230,13 @@ async def websocket_endpoint(websocket: WebSocket, userid: str):
                             else:
                                 cell_serialized.append(j)
                         serialized_mess.append(cell_serialized)
-                    await websocket.send_json(serialized_mess)
-                    
+                    send_mess = {
+                        "group_id" : group_id,
+                        "mess" : serialized_mess,
+                    }
+                    await websocket.send_json(send_mess)
+                else:
+                    pass
                     
                 
     except Exception as e:

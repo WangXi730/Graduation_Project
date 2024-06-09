@@ -1,12 +1,17 @@
 from PySide6.QtWidgets import QLabel,QSpinBox,QApplication, QMainWindow, QVBoxLayout, QWidget, QLineEdit, QPushButton, QGridLayout
+from network import net_game_list,net_download_game
+import math
+
 
 class GameList(QMainWindow):
-    def __init__(self):
-        super().__init__()
+    def __init__(self,parent=None):
+        self.game_list = []
+        super().__init__(parent)
+        self.parent = parent
         self.initUI()
 
     def initUI(self):
-        self.setWindowTitle("页面示例")
+        self.setWindowTitle("game list")
         self.setMinimumSize(400, 300)
 
         # 创建上半部分的部件
@@ -56,7 +61,7 @@ class GameList(QMainWindow):
         self.page_spinbox.setMaximum(10)
         self.page_spinbox.valueChanged.connect(self.update_page)
         self.input_edit = QLineEdit()
-        self.input_edit.returnPressed.connect(self.print_input)
+        self.input_edit.returnPressed.connect(self.print_output)
 
         # 将页码控制组件和输入框添加到下半部分的布局中
         self.bottom_layout.addWidget(self.page_label)
@@ -66,20 +71,40 @@ class GameList(QMainWindow):
     def download(self):
         button = self.sender()
         index = self.download_buttons.index(button)
-        text = self.text_edits[index].text()
-        print(f"{text} 已下载")
+
+        # 获取当前所在页
+        page = self.page_spinbox.value()
+        if page > 0:
+            # 获取当前所在位置
+            index = (page - 1) + index
+            if index < len(self.game_list):
+                net_download_game(self.game_list[index][1])
 
     def update_page(self):
         page = self.page_spinbox.value()
-        filename = f"file{page}.txt"
-        with open(filename, "r") as file:
-            content = file.read()
-            for text_edit in self.text_edits:
-                text_edit.setText(content)
+        # 展示这一页应该展示的
+        # 首先，求出这一页的首行信息是第几个游戏
+        index0 = (page-1) * 10
+        # 展示信息
+        print(f'{len(self.game_list)},{index0}')
+        for i in range(min(len(self.game_list) - index0, 10)):
+            self.text_edits[i].setText(self.game_list[index0 + i][0])
 
-    def print_input(self):
-        text = self.input_edit.text()
-        self.output_text_edit.setText(text)
+
+    def print_output(self):
+        input_text = self.input_edit.text()
+        id = self.parent.userid
+        self.parent.session_id,self.game_list = net_game_list(id,self.parent.session_id,input_text)
+
+        # 显示匹配结果的数量
+        page_count = len(self.game_list) / 10
+        if page_count != math.ceil(page_count):
+            page_count = math.ceil(page_count)
+        self.output_text_edit.setText(f'一共{page_count}页')
+
+        self.update_page()
+
+
 
 if __name__ == '__main__':
     app = QApplication([])

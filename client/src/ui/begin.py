@@ -1,12 +1,12 @@
 from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QFormLayout, QLabel, QLineEdit, QPushButton
-from logon import Logon
-from login import Login
+from ui.logon import Logon
+from ui.login import Login
 
-class MyWindow(QWidget):
+class Begin(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("My Window")
+        self.setWindowTitle("Begin")
         self.setFixedSize(300, 200)  # 设置窗口大小为300x200
 
         # 创建布局
@@ -50,6 +50,6 @@ class MyWindow(QWidget):
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = MyWindow()
+    window = Begin()
     window.show()
     app.exec()

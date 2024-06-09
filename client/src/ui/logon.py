@@ -1,6 +1,8 @@
 from PySide6.QtCore import Signal
 from PySide6.QtWidgets import QApplication,QDialog, QWidget, QVBoxLayout, QFormLayout, QLabel, QLineEdit, QPushButton
 
+from network import net_logon
+
 class Logon(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -41,8 +43,9 @@ class Logon(QDialog):
     def show_message(self):
         username = self.username_textbox.text()
         password = self.password_textbox.text()
-        message = f"用户名：{username}，密码：{password}"
-        self.message_label.setText(message)
+        # message = f"用户名：{username}，密码：{password}"
+        uid = net_logon(username,password)
+        self.message_label.setText(f"您的账号为{uid}，请牢记")
 
 
 
